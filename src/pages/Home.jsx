@@ -5,8 +5,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, ArrowRight, Zap } from "lucide-react";
 import UgaritLogo from "../assets/UgaritLogo.svg";
 import UgaritLogoImg from "../../Screenshot_2025-05-14_13.42.23-removebg-preview.png";
+import HeroBg from "../assets/hero-bg.svg";
 import LogoMarquee from "../components/LogoMarquee";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import TypewriterText from "../components/TypewriterText";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -36,108 +38,65 @@ export default function Home() {
     <>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section 
-          ref={heroRef}
-          className="relative h-screen flex items-center justify-center overflow-hidden"
-        >
-          {/* Video Background */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-black/50 backdrop-filter backdrop-blur-sm z-10"></div>
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="absolute w-full h-full object-cover"
-              poster="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-            >
-              <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-grid-background-18161-large.mp4" type="video/mp4" />
-            </video>
+        <section className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
+          <div className="absolute inset-0">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <img src={HeroBg} alt="" className="w-full h-full object-cover opacity-30" />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black"></div>
+            
+            {/* Gradientes de fundo */}
+            <div className="absolute top-0 right-0 w-1/3 h-64 bg-[#9442fe]/20 blur-[120px]"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-64 bg-[#00f0ff]/20 blur-[120px]"></div>
           </div>
 
-          {/* Hero Content */}
-          <div className="container relative z-10 px-6 text-center">
-            <div className="mb-6">
+          <div className="container mx-auto px-6 relative z-10">
+            <motion.div 
+              className="max-w-4xl mx-auto text-center"
+              style={{ opacity: heroOpacity, y: heroY }}
+            >
+              {/* Badge */}
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
-                <span className="text-sm md:text-base text-white/90">Laboratório de Automação Inteligente</span>
+                <span className="text-sm text-white/90">Laboratório de Automação Inteligente</span>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    visible: {
-                      transition: {
-                        staggerChildren: 0.1
-                      }
-                    }
-                  }}
-                >
-                  {"Agentes que transformam o invisível em tangível".split("").map((char, index) => (
-                    <motion.span
-                      key={index}
-                      variants={{
-                        hidden: { opacity: 0, y: 0 },
-                        visible: { opacity: 1, y: 0 }
-                      }}
-                      className={char === " " ? "mr-[0.2em]" : (
-                        index >= "Agentes que transformam o ".length ? "gradient-text" : ""
-                      )}
-                    >
-                      {char}
-                </motion.span>
-                  ))}
-                <motion.span
-                    className="inline-block ml-1 -mb-1"
-                    animate={{ opacity: [1, 0] }}
-                    transition={{ 
-                      duration: 0.8, 
-                      repeat: Infinity, 
-                      repeatType: "reverse",
-                      delay: 4 // Começa a piscar após o texto terminar
-                    }}
-                  >
-                    /
-                </motion.span>
-                </motion.div>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+
+              {/* Título Principal com TypewriterText */}
+              <div className="mb-6">
+                <h1 className="text-4xl md:text-6xl font-bold mb-2">
+                  <TypewriterText 
+                    text="Agentes que transformam o invisível em tangível" 
+                    speed={70}
+                    className="bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text"
+                  />
+                </h1>
+              </div>
+
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12">
                 Não somos uma agência de chatbots. Somos um laboratório de automação que cria agentes humanizados que decidem com lógica, sentem com linguagem e aprendem com dados reais.
               </p>
-            </div>
 
-            <div className="flex flex-row items-center justify-center gap-6 sm:gap-10 mt-10 mb-2">
-              <Link to={createPageUrl("Portfolio")}> 
+              {/* Botões */}
+              <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-[#00f0ff] to-[#9442fe] text-black font-bold rounded-full flex items-center space-x-2"
+                  className="px-8 py-4 bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 border border-[#00f0ff]/30 text-white font-medium rounded-full flex items-center space-x-2 group hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] transition-all duration-300"
                 >
                   <span>Ver Portfólio</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
-              </Link>
-              <motion.div
-                animate={{ y: [0, -16, 0] }}
-                transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-                className="flex-shrink-0 cursor-pointer"
-                role="button"
-                tabIndex={0}
-                aria-label="Rolar para baixo"
-                onClick={scrollToAbout}
-                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') scrollToAbout(); }}
-              >
-                <ChevronDown className="w-10 h-10 text-white/70" />
-              </motion.div>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-transparent border border-white/30 backdrop-blur-md hover:bg-white/10 text-white font-medium rounded-full"
-                onClick={scrollToAbout}
-              >
-                Saiba Mais
-              </motion.button>
-            </div>
+
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-white text-black font-medium rounded-full flex items-center space-x-2 group hover:bg-opacity-90 transition-all duration-300"
+                >
+                  <span>Saiba Mais</span>
+                  <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                </motion.button>
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -204,32 +163,48 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10"
+                transition={{ delay: 0.2, duration: 0.8 }}
+                className="p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-[#00f0ff]/20 shadow-[0_0_25px_rgba(0,240,255,0.1)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,240,255,0.2)] hover:border-[#00f0ff]/40 hover:scale-[1.02] group relative overflow-hidden"
               >
-                {/* Título */}
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.8 }}
-                  className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text"
-                >
-                  Liberamos o tempo dos visionários impacientes
-                </motion.h2>
+                {/* Efeito de glow no background */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#00f0ff]/5 via-transparent to-[#9442fe]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                
+                {/* Conteúdo */}
+                <div className="relative z-10">
+                  {/* Título */}
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                    className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(0,240,255,0.5)]"
+                  >
+                    Liberamos o tempo dos visionários impacientes
+                  </motion.h2>
 
-                {/* Texto */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4, duration: 0.8 }}
-                  className="text-xl md:text-2xl text-center text-gray-300 leading-relaxed"
-                >
-                  Transformamos a complexidade em simplicidade através de agentes humanizados que não apenas executam, mas{" "}
-                  <span className="font-semibold text-white">evoluem, aprendem e se adaptam</span>{" "}
-                  ao DNA da sua empresa. Porque atrás de cada agente, existe engenharia, teste, segurança e atualização contínua.
-                </motion.p>
+                  {/* Texto */}
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                    className="text-xl md:text-2xl text-center text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300"
+                  >
+                    Transformamos a complexidade em simplicidade através de agentes humanizados que não apenas executam, mas{" "}
+                    <span className="font-semibold text-white drop-shadow-[0_0_8px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(0,240,255,0.5)]">
+                      evoluem, aprendem e se adaptam
+                    </span>{" "}
+                    ao DNA da sua empresa. Porque atrás de cada agente, existe engenharia, teste, segurança e atualização contínua.
+                  </motion.p>
+                </div>
+
+                {/* Bordas com glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00f0ff]/50 to-transparent"></div>
+                  <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#9442fe]/50 to-transparent"></div>
+                  <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-[#00f0ff]/50 to-transparent"></div>
+                  <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-[#9442fe]/50 to-transparent"></div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -318,7 +293,7 @@ export default function Home() {
         <section className="py-24 bg-gradient-to-br from-black via-[#1a1a1a] to-black relative">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10">
+              <div className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-[#4ADE80]/30 shadow-[0_0_30px_rgba(74,222,128,0.2)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(74,222,128,0.4)] hover:border-[#4ADE80]/50">
                 <h2 className="text-4xl font-bold text-center mb-12">
                   <span className="text-white">Ugarit</span>{" "}
                   <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">vs.</span>{" "}
@@ -328,15 +303,15 @@ export default function Home() {
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
-                      <tr className="border-b border-white/10">
+                      <tr className="border-b border-[#4ADE80]/30">
                         <th className="py-4 px-6 text-left text-gray-300">Característica</th>
                         <th className="py-4 px-6 text-center text-gray-300">Chatbots Genéricos</th>
                         <th className="py-4 px-6 text-center text-gray-300">Plataformas No-Code</th>
-                        <th className="py-4 px-6 text-center bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text font-bold">Ugarit Digital</th>
+                        <th className="py-4 px-6 text-center text-[#4ADE80] font-bold">Ugarit Digital</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-white/10">
-                      <tr>
+                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
                         <td className="py-4 px-6 text-gray-300">Personalização real com código</td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
@@ -352,12 +327,12 @@ export default function Home() {
                         </td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
-                            <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">✓</span>
-                            <span className="ml-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">Sim</span>
+                            <span className="text-[#4ADE80]">✓</span>
+                            <span className="ml-2 text-[#4ADE80]">Sim</span>
                           </span>
                         </td>
                       </tr>
-                      <tr>
+                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
                         <td className="py-4 px-6 text-gray-300">Infraestrutura dedicada (VPS + BD)</td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
@@ -373,12 +348,12 @@ export default function Home() {
                         </td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
-                            <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">✓</span>
-                            <span className="ml-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">Sim</span>
+                            <span className="text-[#4ADE80]">✓</span>
+                            <span className="ml-2 text-[#4ADE80]">Sim</span>
                           </span>
                         </td>
                       </tr>
-                      <tr>
+                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
                         <td className="py-4 px-6 text-gray-300">Suporte técnico + estratégico</td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
@@ -394,12 +369,12 @@ export default function Home() {
                         </td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
-                            <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">✓</span>
-                            <span className="ml-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">Nativo</span>
+                            <span className="text-[#4ADE80]">✓</span>
+                            <span className="ml-2 text-[#4ADE80]">Nativo</span>
                           </span>
                         </td>
                       </tr>
-                      <tr>
+                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
                         <td className="py-4 px-6 text-gray-300">Cultura hacker ética</td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
@@ -413,8 +388,8 @@ export default function Home() {
                         </td>
                         <td className="py-4 px-6 text-center">
                           <span className="inline-flex items-center">
-                            <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">✓</span>
-                            <span className="ml-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">DNA da marca</span>
+                            <span className="text-[#4ADE80]">✓</span>
+                            <span className="ml-2 text-[#4ADE80]">DNA da marca</span>
                           </span>
                         </td>
                       </tr>
@@ -966,18 +941,37 @@ export default function Home() {
 const FeatureCard = ({ icon, title, description, delay }) => {
   return (
     <motion.div
-      className="rounded-xl overflow-hidden bg-gradient-to-b from-gray-800/50 to-gray-900/50 backdrop-blur-md border border-gray-800 p-8 hover:border-gray-700 transition-all group"
+      className="relative rounded-xl overflow-hidden backdrop-blur-md border border-[#00f0ff]/20 p-8 transition-all duration-500 group"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ delay, duration: 0.8 }}
-      whileHover={{ y: -5 }}
+      whileHover={{ 
+        scale: 1.05, 
+        y: -5,
+        borderColor: "rgba(0, 240, 255, 0.4)",
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
     >
-      <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 flex items-center justify-center mb-6 group-hover:from-[#00f0ff]/30 group-hover:to-[#9442fe]/30 transition-all">
-        <IconComponent name={icon} className="w-6 h-6 text-white" />
+      {/* Efeito de glow no background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#00f0ff]/5 via-transparent to-[#9442fe]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+      
+      {/* Conteúdo */}
+      <div className="relative z-10">
+        <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 flex items-center justify-center mb-6 group-hover:from-[#00f0ff]/30 group-hover:to-[#9442fe]/30 transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.3)] group-hover:shadow-[0_0_25px_rgba(0,240,255,0.5)]">
+          <IconComponent name={icon} className="w-6 h-6 text-[#00f0ff] drop-shadow-[0_0_5px_rgba(0,240,255,0.5)]" />
+        </div>
+        <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-[#00f0ff] to-[#9442fe] bg-clip-text text-transparent drop-shadow-[0_0_2px_rgba(0,240,255,0.3)]">{title}</h3>
+        <p className="text-gray-400 transition-all duration-300 group-hover:text-gray-300">{description}</p>
       </div>
-      <h3 className="text-xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-400">{description}</p>
+
+      {/* Bordas com glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00f0ff]/50 to-transparent"></div>
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#9442fe]/50 to-transparent"></div>
+        <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-[#00f0ff]/50 to-transparent"></div>
+        <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-[#9442fe]/50 to-transparent"></div>
+      </div>
     </motion.div>
   );
 };

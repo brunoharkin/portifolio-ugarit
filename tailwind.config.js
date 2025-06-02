@@ -1,16 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        'primary-neon': '#00F0FF',
-        'secondary-neon': '#9442FE',
-        'success-neon': '#4ADE80',
-        'warning-neon': '#FFB800',
-        'error-neon': '#FF4444',
+        primary: {
+          neon: '#00F0FF',
+          purple: '#9442FE',
+        },
+        secondary: {
+          neon: '#FE42E8',
+        },
+        success: {
+          neon: '#42FE71',
+        },
+        warning: {
+          neon: '#FED042',
+        },
+        error: {
+          neon: '#FE4242',
+        },
       },
       boxShadow: {
         'neon-sm': '0 0 5px rgba(0,240,255,0.3)',

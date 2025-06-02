@@ -18,6 +18,16 @@
   .neon-gradient {
     @apply bg-gradient-to-r from-[#00F0FF] to-[#9442FE];
   }
+
+  .neon-gradient-text {
+    @apply bg-gradient-to-r from-[#00F0FF] to-[#9442FE] bg-clip-text text-transparent;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+  }
+
+  .typewriter-cursor {
+    @apply inline-block ml-0;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  }
 }
 
 /* Efeitos Neon */
@@ -26,7 +36,8 @@
 }
 
 .hover-neon:hover {
-  box-shadow: 0 0 20px theme('colors.primary.neon'), 0 0 40px theme('colors.primary.purple');
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5),
+              0 0 40px rgba(148, 66, 254, 0.3);
 }
 
 .hover-neon-link {
@@ -34,7 +45,8 @@
 }
 
 .hover-neon-link:hover {
-  text-shadow: 0 0 10px theme('colors.primary.neon'), 0 0 20px theme('colors.primary.purple');
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
+               0 0 20px rgba(148, 66, 254, 0.3);
 }
 
 .neon-table-row {
@@ -43,7 +55,8 @@
 
 .neon-table-row:hover {
   @apply scale-[1.02] bg-white/5;
-  box-shadow: inset 0 0 20px theme('colors.primary.neon'), inset 0 0 40px theme('colors.primary.purple');
+  box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.3),
+              inset 0 0 40px rgba(148, 66, 254, 0.2);
 }
 
 .neon-cell {
@@ -52,7 +65,8 @@
 
 .neon-cell:hover {
   @apply scale-105;
-  box-shadow: 0 0 15px theme('colors.primary.neon'), 0 0 30px theme('colors.primary.purple');
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3),
+              0 0 30px rgba(148, 66, 254, 0.2);
 }
 
 .neon-button {
@@ -61,7 +75,8 @@
 }
 
 .neon-button:hover {
-  box-shadow: 0 0 20px theme('colors.primary.neon'), 0 0 40px theme('colors.primary.purple');
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5),
+              0 0 40px rgba(148, 66, 254, 0.3);
 }
 
 /* Estilos Base */
@@ -72,7 +87,7 @@ body {
 
 /* Animações */
 .gradient-text {
-  background: linear-gradient(90deg, theme('colors.primary.neon'), theme('colors.primary.purple'));
+  background: linear-gradient(90deg, #00F0FF, #9442FE);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

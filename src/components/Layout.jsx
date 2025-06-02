@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     { title: 'Portfolio', path: '/portfolio' },
     { title: 'Blog', path: '/blog' },
     { title: 'Parceiros', path: '/parceiros' },
-    { title: 'Contato', path: '/contato' }
+    { title: 'Contato', path: '/contact' }
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
