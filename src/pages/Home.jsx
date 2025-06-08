@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "../utils";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, ArrowRight, Zap } from "lucide-react";
+import { ChevronDown, ArrowRight, Zap, Brain, Sparkles } from "lucide-react";
 import UgaritLogo from "../assets/UgaritLogo.svg";
 import UgaritLogoImg from "../../Screenshot_2025-05-14_13.42.23-removebg-preview.png";
 import HeroBg from "../assets/hero-bg.svg";
@@ -58,23 +58,57 @@ export default function Home() {
             >
               {/* Badge */}
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
+                <span className="mr-2 flex items-center">
+                  {/* Ícone Brain Lucide com cor de cérebro humano */}
+                  <Brain className="w-5 h-5 text-[#FF6F91] drop-shadow-[0_0_6px_#FF6F91]" strokeWidth={2.2} />
+                </span>
                 <span className="text-sm text-white/90">Laboratório de Automação Inteligente</span>
               </div>
 
-              {/* Título Principal com TypewriterText */}
+              {/* Título Principal */}
               <div className="mb-6">
                 <h1 className="text-4xl md:text-6xl font-bold mb-2">
-                  <TypewriterText 
-                    text="Agentes que transformam o invisível em tangível" 
-                    speed={70}
-                    className="bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text"
-                  />
+                  Agentes <span className="bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text">Humanizados</span><span className="text-white"> que </span><span className="bg-gradient-to-r from-[#9442fe] via-[#FFB86C] to-[#00f0ff] text-transparent bg-clip-text">Transformam</span>
                 </h1>
               </div>
 
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12">
-                Não somos uma agência de chatbots. Somos um laboratório de automação que cria agentes humanizados que decidem com lógica, sentem com linguagem e aprendem com dados reais.
+              {/* Subtítulo */}
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Não somos uma agência de chatbots. Somos um laboratório que cria <span className="font-semibold text-[#6B8AFF]">agentes humanizados</span> que decidem com lógica, sentem com linguagem e aprendem com dados reais.
               </p>
+
+              {/* Cards de Benefícios */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div className="rounded-2xl bg-white/10 border border-[#00f0ff]/30 p-6 text-center shadow-lg backdrop-blur-md">
+                  <div className="flex justify-center mb-3">
+                    <Brain className="w-8 h-8 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" strokeWidth={2.2} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">Inteligência Real</h3>
+                  <p className="text-gray-300 text-sm">Agentes que pensam e se adaptam</p>
+                </div>
+                <div className="rounded-2xl bg-white/10 border border-[#00f0ff]/30 p-6 text-center shadow-lg backdrop-blur-md">
+                  <div className="flex justify-center mb-3">
+                    <Sparkles className="w-8 h-8 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" strokeWidth={2.2} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">Personalização Cognitiva</h3>
+                  <p className="text-gray-300 text-sm">Únicos como sua empresa</p>
+                </div>
+                <div className="rounded-2xl bg-white/10 border border-[#00f0ff]/30 p-6 text-center shadow-lg backdrop-blur-md">
+                  <div className="flex justify-center mb-3">
+                    <Zap className="w-8 h-8 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" strokeWidth={2.2} />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-1">Performance Mensurável</h3>
+                  <p className="text-gray-300 text-sm">Resultados que você pode ver</p>
+                </div>
+              </div>
+
+              {/* Frase Destacada */}
+              <div className="max-w-3xl mx-auto mb-10 flex items-center">
+                <div className="w-1 h-16 bg-yellow-400 mr-4 rounded"></div>
+                <p className="italic text-lg text-gray-200">
+                  "Liberamos o tempo dos visionários impacientes. Como um laboratório de automação, nossa missão é desacelerar o tempo para você, permitindo que seu negócio salte uma década à frente."
+                </p>
+              </div>
 
               {/* Botões */}
               <div className="flex flex-wrap justify-center gap-4">
