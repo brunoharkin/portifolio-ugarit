@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "../utils";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, ArrowRight, Zap, Brain, Sparkles } from "lucide-react";
+import { ChevronDown, ArrowRight, Zap, Brain, Sparkles, BarChart3 } from "lucide-react";
 import UgaritLogo from "../assets/UgaritLogo.svg";
 import UgaritLogoImg from "../../Screenshot_2025-05-14_13.42.23-removebg-preview.png";
 import HeroBg from "../assets/hero-bg.svg";
@@ -134,6 +134,143 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Produtos & Serviços Section */}
+        <section className="py-24 bg-black relative overflow-hidden">
+          {/* Glow de fundo */}
+          <div className="absolute -left-32 -top-32 w-96 h-96 bg-[#00f0ff]/10 blur-[120px] rounded-full pointer-events-none"></div>
+          <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-[#9442fe]/10 blur-[120px] rounded-full pointer-events-none"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-[#00f0ff]/30 shadow-[0_0_12px_#00f0ff40]">
+                <span className="mr-2 flex items-center">
+                  <BarChart3 className="w-5 h-5 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" strokeWidth={2.2} />
+                </span>
+                <span className="text-sm text-white/90">Produtos & Serviços</span>
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,240,255,0.3)]">
+              Soluções que <span className="text-[#6B8AFF]">Evoluem</span> com seu Negócio
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+              Do laboratório para sua empresa: agentes humanizados e plataformas SaaS que transformam processos em vantagem competitiva.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+              {/* Card Agentes Humanizados */}
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#00f0ff]/40 bg-transparent group transition-all duration-300 hover:shadow-[0_0_40px_#00f0ff80] hover:border-[#00f0ff] flex flex-col h-full justify-between">
+                {/* Glow animado */}
+                <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#00f0ff]/20 blur-2xl rounded-full opacity-60 group-hover:opacity-90 transition-all duration-300 pointer-events-none"></div>
+                <div className="flex items-center gap-3 px-8 py-6 bg-transparent">
+                  <Brain className="w-10 h-10 text-white drop-shadow-[0_0_16px_#00f0ff] animate-pulse" strokeWidth={2.2} />
+                  <span className="text-2xl font-bold neon-gradient-text drop-shadow-[0_0_8px_#00f0ff]">Agentes Humanizados</span>
+                </div>
+                <div className="flex-1 flex flex-col px-8 py-6 justify-between">
+                  <div>
+                    <p className="text-gray-200 mb-4">Criamos mentes digitais únicas que executam tarefas com precisão, autonomia e inteligência.</p>
+                    <div className="mb-4">
+                      <span className="font-semibold text-white">Principais Recursos:</span>
+                      <ul className="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                        <li>Agentes em Código Puro (Alta Complexidade)</li>
+                        <li>Agentes No-Code (Implementação Rápida)</li>
+                        <li>Personalização Cognitiva Total</li>
+                        <li>Memória Contextual e Contínua</li>
+                      </ul>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-black/40 rounded-xl p-4 flex flex-col items-center border border-[#00f0ff]/40 shadow-[0_0_10px_#00f0ff60] min-h-[110px]">
+                        <span className="text-[#00f0ff] text-2xl mb-1 animate-pulse">&lt;/&gt;</span>
+                        <span className="font-bold text-white text-sm mb-1">Código Puro</span>
+                        <ul className="text-xs text-gray-200 text-left list-disc list-inside space-y-0.5 mt-1">
+                          <li>Projetos complexos</li>
+                          <li>Integrações robustas</li>
+                          <li>Arquitetura personalizada</li>
+                        </ul>
+                      </div>
+                      <div className="bg-black/40 rounded-xl p-4 flex flex-col items-center border border-[#00f0ff]/40 shadow-[0_0_10px_#00f0ff60] min-h-[110px]">
+                        <span className="text-[#00f0ff] text-2xl mb-1 animate-pulse">⚡</span>
+                        <span className="font-bold text-white text-sm mb-1">No-Code</span>
+                        <ul className="text-xs text-gray-200 text-left list-disc list-inside space-y-0.5 mt-1">
+                          <li>Implementação rápida</li>
+                          <li>Necessidades específicas</li>
+                          <li>Sem programação</li>
+                        </ul>
+                      </div>
+                      <div className="bg-black/40 rounded-xl p-4 flex flex-col items-center border border-[#00f0ff]/40 shadow-[0_0_10px_#00f0ff60] min-h-[110px]">
+                        <span className="text-[#00f0ff] text-2xl mb-1 animate-pulse">🔗</span>
+                        <span className="font-bold text-white text-sm mb-1">Integração Total</span>
+                        <ul className="text-xs text-gray-200 text-left list-disc list-inside space-y-0.5 mt-1">
+                          <li>Conexão com sistemas</li>
+                          <li>APIs diversas</li>
+                          <li>Automação de dados</li>
+                        </ul>
+                      </div>
+                      <div className="bg-black/40 rounded-xl p-4 flex flex-col items-center border border-[#00f0ff]/40 shadow-[0_0_10px_#00f0ff60] min-h-[110px]">
+                        <span className="text-[#00f0ff] text-2xl mb-1 animate-pulse">🖥️</span>
+                        <span className="font-bold text-white text-sm mb-1">Infraestrutura Dedicada</span>
+                        <ul className="text-xs text-gray-200 text-left list-disc list-inside space-y-0.5 mt-1">
+                          <li>VPS isolada</li>
+                          <li>Segurança avançada</li>
+                          <li>Alta disponibilidade</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button className="w-full max-w-xs mx-auto mb-0 px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all mt-auto">
+                    Explorar Agentes Humanizados
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+              {/* Card Produtos SaaS */}
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#FFB86C]/40 bg-transparent group transition-all duration-300 hover:shadow-[0_0_40px_#FFB86C80] hover:border-[#FFB86C] flex flex-col h-full justify-between">
+                {/* Glow animado */}
+                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#FFB86C]/20 blur-2xl rounded-full opacity-60 group-hover:opacity-90 transition-all duration-300 pointer-events-none"></div>
+                <div className="flex items-center gap-3 px-8 py-6 bg-transparent">
+                  <BarChart3 className="w-10 h-10 text-white drop-shadow-[0_0_16px_#FFB86C] animate-pulse" strokeWidth={2.2} />
+                  <span className="text-2xl font-bold bg-gradient-to-r from-[#FFB86C] to-[#FF6F91] bg-clip-text text-transparent drop-shadow-[0_0_8px_#FFB86C]">Produtos SaaS</span>
+                </div>
+                <div className="flex-1 flex flex-col px-8 py-6 justify-between">
+                  <div>
+                    <p className="text-gray-200 mb-4">Utilizamos soluções líderes de mercado para gestão inteligente e criamos dashboards de performance sob medida para seu negócio.</p>
+                    <div className="mb-4">
+                      <span className="font-semibold text-white">Principais Recursos:</span>
+                      <ul className="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                        <li>CRM Chatwoot (Gestão Inteligente, integração completa)</li>
+                        <li>Dashboards de Performance (criados sob medida)</li>
+                      </ul>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-black/40 rounded-xl p-4 flex flex-col items-center border border-[#FFB86C]/40 shadow-[0_0_10px_#FFB86C60] min-h-[110px]">
+                        <span className="text-[#FFB86C] text-2xl mb-1 animate-pulse">🤖</span>
+                        <span className="font-bold text-white text-sm mb-1">CRM Chatwoot</span>
+                        <span className="text-xs text-gray-200 text-center mb-1">Relacionamento com IA embarcada</span>
+                        <ul className="text-xs text-gray-300 text-left list-disc list-inside space-y-0.5 mt-1">
+                          <li>Fluxos automáticos e inteligentes</li>
+                          <li>Integrações com canais e banco de dados</li>
+                          <li>Agentes conectados ao seu cliente em tempo real</li>
+                        </ul>
+                      </div>
+                      <div className="bg-black/40 rounded-xl p-4 flex flex-col items-center border border-[#FFB86C]/40 shadow-[0_0_10px_#FFB86C60] min-h-[110px]">
+                        <span className="text-[#FFB86C] text-2xl mb-1 animate-pulse">📊</span>
+                        <span className="font-bold text-white text-sm mb-1">Dashboards Inteligentes</span>
+                        <span className="text-xs text-gray-200 text-center mb-1">Métricas que guiam. Dados que convertem.</span>
+                        <ul className="text-xs text-gray-300 text-left list-disc list-inside space-y-0.5 mt-1">
+                          <li>Visualização em tempo real</li>
+                          <li>Indicadores sob medida</li>
+                          <li>ROI e performance em uma tela</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button className="w-full max-w-xs mx-auto mb-0 px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all mt-auto">
+                    Explorar Produtos SaaS
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Metrics Section */}
         <section className="py-16 bg-black/50 backdrop-blur-sm border-t border-b border-white/10">
           <div className="container mx-auto px-6">
@@ -190,7 +327,7 @@ export default function Home() {
         </section>
 
         {/* Visionaries Section */}
-        <section className="py-24 bg-gradient-to-br from-black via-[#1a1a1a] to-black relative">
+        <section className="py-24 bg-black relative">
           <div className="container mx-auto px-6">
             <div className="max-w-5xl mx-auto">
               <motion.div
@@ -251,7 +388,7 @@ export default function Home() {
         {/* About Section */}
         <section 
           ref={aboutRef}
-          className="py-24 bg-gradient-to-b from-black to-gray-900 relative"
+          className="py-24 bg-black relative"
         >
           <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
           
@@ -324,7 +461,7 @@ export default function Home() {
         </section>
 
         {/* Comparison Section */}
-        <section className="py-24 bg-gradient-to-br from-black via-[#1a1a1a] to-black relative">
+        <section className="py-24 bg-black relative">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-[#4ADE80]/30 shadow-[0_0_30px_rgba(74,222,128,0.2)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(74,222,128,0.4)] hover:border-[#4ADE80]/50">
@@ -440,7 +577,7 @@ export default function Home() {
         </section>
 
         {/* Process Timeline Section */}
-        <section className="py-24 bg-gradient-to-br from-black via-[#1a1a1a] to-black relative">
+        <section className="py-24 bg-black relative">
           <style jsx>{`
             @keyframes floatLeft {
               0%, 100% { transform: translateX(-8px); }
@@ -685,7 +822,7 @@ export default function Home() {
         </section>
 
         {/* Featured Agents Section */}
-        <section className="py-24 bg-[#080808] relative">
+        <section className="py-24 bg-black relative">
           <div className="container mx-auto px-6">
             <motion.div 
               className="max-w-4xl mx-auto text-center mb-16"
@@ -931,7 +1068,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-black">
+        <section className="py-24 bg-black relative">
           <div className="container mx-auto px-6">
             <motion.div 
               className="max-w-5xl mx-auto bg-gradient-to-r from-[#111111] to-[#1a1a1a] p-12 rounded-2xl border border-gray-800 relative overflow-hidden"
