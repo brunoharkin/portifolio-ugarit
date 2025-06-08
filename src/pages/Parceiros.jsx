@@ -56,7 +56,7 @@ export default function Parceiros() {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center py-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="relative min-h-screen flex items-center py-20 bg-black">
         <div className="absolute top-0 right-0 w-1/3 h-64 bg-[#9442fe]/20 blur-[120px]"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-64 bg-[#00f0ff]/20 blur-[120px]"></div>
         
@@ -139,7 +139,7 @@ export default function Parceiros() {
       </section>
 
       {/* Como Funciona Section */}
-      <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative">
+      <section className="py-24 bg-black relative">
         <div className="container mx-auto px-6">
           <motion.h2 
             className="text-3xl md:text-5xl font-bold mb-16 text-center"
@@ -207,7 +207,7 @@ export default function Parceiros() {
       </section>
 
       {/* Quem Pode Ser Section */}
-      <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative">
+      <section className="py-24 bg-black relative">
         <div className="container mx-auto px-6">
           <motion.div
             className="max-w-4xl mx-auto"

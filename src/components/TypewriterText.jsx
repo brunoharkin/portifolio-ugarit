@@ -1,44 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const TypewriterText = ({ text, speed = 50 }) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
+const TypewriterText = ({ text, speed = 50, className = "" }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= text.length) {
-        setDisplayedText(text.slice(0, currentIndex));
-        currentIndex++;
-        if (currentIndex > text.length) {
-          clearInterval(interval);
-          setIsTypingComplete(true);
-        }
-      }
-    }, speed);
+    if (currentIndex < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, speed);
 
-    return () => clearInterval(interval);
-  }, [text, speed]);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, text, speed]);
+
+  const renderText = () => {
+    const parts = text.split(" ");
+    const firstPart = parts[0] + " " + parts[1]; // "Agentes que"
+    const restOfText = parts.slice(2).join(" "); // "transformam o invisível em tangível"
+
+    return (
+      <>
+        <span className="text-white">{firstPart}</span>
+        <span className="bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text">
+          {" " + restOfText}
+        </span>
+      </>
+    );
+  };
 
   return (
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
-      <span className="neon-gradient-text">{displayedText}</span>
-      {isTypingComplete && (
-        <motion.span
-          className="text-[#00F0FF] inline-block"
-          animate={{ opacity: [1, 0] }}
-          transition={{
-            duration: 0.5,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-          style={{ marginLeft: '1px' }}
-        >
-          /
-        </motion.span>
-      )}
-    </h1>
+    <div className={`inline-block ${className}`}>
+      {renderText()}
+    </div>
   );
 };
 
