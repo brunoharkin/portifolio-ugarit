@@ -271,554 +271,155 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Metrics Section */}
-        <section className="py-16 bg-black/50 backdrop-blur-sm border-t border-b border-white/10">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center"
-              >
-                <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">
-                  20-30
-                </h3>
-                <p className="text-gray-400">dias para entrega</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-center"
-              >
-                <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">
-                  89%
-                </h3>
-                <p className="text-gray-400">taxa de qualificação</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-center"
-              >
-                <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">
-                  7/30
-                </h3>
-                <p className="text-gray-400">suporte especializado</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-center"
-              >
-                <h3 className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">
-                  VPS
-                </h3>
-                <p className="text-gray-400">dedicada p/ cliente</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Visionaries Section */}
-        <section className="py-24 bg-black relative">
-          <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2, duration: 0.8 }}
-                className="p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-[#00f0ff]/20 shadow-[0_0_25px_rgba(0,240,255,0.1)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,240,255,0.2)] hover:border-[#00f0ff]/40 hover:scale-[1.02] group relative overflow-hidden"
-              >
-                {/* Efeito de glow no background */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#00f0ff]/5 via-transparent to-[#9442fe]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-                
-                {/* Conteúdo */}
-                <div className="relative z-10">
-                  {/* Título */}
-                  <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    className="text-4xl md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(0,240,255,0.5)]"
-                  >
-                    Liberamos o tempo dos visionários impacientes
-                  </motion.h2>
-
-                  {/* Texto */}
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4, duration: 0.8 }}
-                    className="text-xl md:text-2xl text-center text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300"
-                  >
-                    Transformamos a complexidade em simplicidade através de agentes humanizados que não apenas executam, mas{" "}
-                    <span className="font-semibold text-white drop-shadow-[0_0_8px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(0,240,255,0.5)]">
-                      evoluem, aprendem e se adaptam
-                    </span>{" "}
-                    ao DNA da sua empresa. Porque atrás de cada agente, existe engenharia, teste, segurança e atualização contínua.
-                  </motion.p>
-                </div>
-
-                {/* Bordas com glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#00f0ff]/50 to-transparent"></div>
-                  <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#9442fe]/50 to-transparent"></div>
-                  <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-[#00f0ff]/50 to-transparent"></div>
-                  <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-[#9442fe]/50 to-transparent"></div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* Decorative Elements */}
-          <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#00F0FF]/10 blur-[100px] rounded-full"></div>
-          <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#9442FE]/10 blur-[100px] rounded-full"></div>
-        </section>
-
-        {/* About Section */}
-        <section 
-          ref={aboutRef}
-          className="py-24 bg-black relative"
-        >
-          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
-          
-          <div className="container mx-auto px-6">
-            <motion.div 
-              className="max-w-4xl mx-auto text-center mb-16"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-            >
-              {/* Badge */}
-              <div className="flex justify-center mb-8">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20"
-                >
-                  <span className="text-sm text-white/90">Nossos Diferenciais</span>
-                </motion.div>
-              </div>
-
-              <h2 className="text-3xl md:text-5xl font-bold mb-8">
-                Por que a <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">Ugarit é única</span>
-              </h2>
-              <p className="text-xl text-gray-300">
-                Unimos a precisão da engenharia com a beleza do design, criando automações que não apenas funcionam, mas encantam.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <FeatureCard 
-                icon="star"
-                title="Laboratório vs. Agência"
-                description="Não entregamos projetos. Criamos um ecossistema de agentes humanizados que evolui com seu negócio."
-                delay={0}
-              />
-              <FeatureCard 
-                icon="brain"
-                title="Personalização Cognitiva"
-                description="Cada agente é único, treinado com os dados reais da sua empresa, moldado pela sua marca."
-                delay={0.2}
-              />
-              <FeatureCard 
-                icon="shield"
-                title="Segurança Hacker"
-                description="Protegemos seu ecossistema digital com criptografia prática e eficiente, sem jargões intimidadores."
-                delay={0.4}
-              />
-              <FeatureCard 
-                icon="code"
-                title="Arquitetura Sob Medida"
-                description="Código puro ou plataformas no-code, sempre priorizando a complexidade específica do seu negócio."
-                delay={0.6}
-              />
-              <FeatureCard 
-                icon="users"
-                title="Experiência Antes da Aquisição"
-                description="Você não compra uma promessa — você experimenta o valor antes de investir."
-                delay={0.8}
-              />
-              <FeatureCard 
-                icon="award"
-                title="Parceria Evolutiva"
-                description="Treinamentos, manutenção contínua, dashboards inteligentes e suporte completo."
-                delay={1.0}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Comparison Section */}
-        <section className="py-24 bg-black relative">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-[#4ADE80]/30 shadow-[0_0_30px_rgba(74,222,128,0.2)] transition-all duration-500 hover:shadow-[0_0_50px_rgba(74,222,128,0.4)] hover:border-[#4ADE80]/50">
-                <h2 className="text-4xl font-bold text-center mb-12">
-                  <span className="text-white">Ugarit</span>{" "}
-                  <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">vs.</span>{" "}
-                  <span className="text-white">Mercado</span>
-                </h2>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-[#4ADE80]/30">
-                        <th className="py-4 px-6 text-left text-gray-300">Característica</th>
-                        <th className="py-4 px-6 text-center text-gray-300">Chatbots Genéricos</th>
-                        <th className="py-4 px-6 text-center text-gray-300">Plataformas No-Code</th>
-                        <th className="py-4 px-6 text-center text-[#4ADE80] font-bold">Ugarit Digital</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-white/10">
-                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
-                        <td className="py-4 px-6 text-gray-300">Personalização real com código</td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FFB800]">⚠️</span>
-                            <span className="ml-2 text-[#FFB800]">Limitada</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FFB800]">⚠️</span>
-                            <span className="ml-2 text-[#FFB800]">Limitada</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#4ADE80]">✓</span>
-                            <span className="ml-2 text-[#4ADE80]">Sim</span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
-                        <td className="py-4 px-6 text-gray-300">Infraestrutura dedicada (VPS + BD)</td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FF4444]">✕</span>
-                            <span className="ml-2 text-[#FF4444]">Não</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FF4444]">✕</span>
-                            <span className="ml-2 text-[#FF4444]">Não</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#4ADE80]">✓</span>
-                            <span className="ml-2 text-[#4ADE80]">Sim</span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
-                        <td className="py-4 px-6 text-gray-300">Suporte técnico + estratégico</td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FF4444]">✕</span>
-                            <span className="ml-2 text-[#FF4444]">Não</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FFB800]">⚠️</span>
-                            <span className="ml-2 text-[#FFB800]">Depende</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#4ADE80]">✓</span>
-                            <span className="ml-2 text-[#4ADE80]">Nativo</span>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr className="transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(74,222,128,0.3)] hover:bg-[#4ADE80]/5">
-                        <td className="py-4 px-6 text-gray-300">Cultura hacker ética</td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FFB800]">⚠️</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#FFB800]">⚠️</span>
-                          </span>
-                        </td>
-                        <td className="py-4 px-6 text-center">
-                          <span className="inline-flex items-center">
-                            <span className="text-[#4ADE80]">✓</span>
-                            <span className="ml-2 text-[#4ADE80]">DNA da marca</span>
-                          </span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Decorative Elements */}
-          <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#00F0FF]/10 blur-[100px] rounded-full"></div>
-          <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#9442FE]/10 blur-[100px] rounded-full"></div>
-        </section>
-
         {/* Process Timeline Section */}
-        <section className="py-24 bg-black relative">
-          <style jsx>{`
-            @keyframes floatLeft {
-              0%, 100% { transform: translateX(-8px); }
-              50% { transform: translateX(-16px); }
-            }
-            @keyframes floatRight {
-              0%, 100% { transform: translateX(8px); }
-              50% { transform: translateX(16px); }
-            }
-            .text-glow {
-              text-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
-                          0 0 20px rgba(0, 240, 255, 0.3),
-                          0 0 30px rgba(0, 240, 255, 0.1);
-            }
-            .text-glow-purple {
-              text-shadow: 0 0 10px rgba(148, 66, 254, 0.5),
-                          0 0 20px rgba(148, 66, 254, 0.3),
-                          0 0 30px rgba(148, 66, 254, 0.1);
-            }
-            .float-left {
-              animation: floatLeft 3s ease-in-out infinite;
-            }
-            .float-right {
-              animation: floatRight 3s ease-in-out infinite;
-            }
-          `}</style>
-
-          <div className="container mx-auto px-6">
+        <section className="py-20 bg-black relative">
+          <div className="container mx-auto px-4">
             {/* Header */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-[#00F0FF]/20 mb-8">
-                <span className="text-sm text-white/90">
-                  <svg className="w-4 h-4 inline mr-2 text-[#00F0FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
-                  Metodologia de Entrega
-                </span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Processo em{" "}
-                <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text">7 Etapas</span>
+              <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-white/90 font-semibold text-sm mb-6 shadow-lg">Metodologia de Entrega</div>
+              <h2 className="text-5xl font-extrabold mb-4 neon-gradient-text">
+                Como entregamos resultados
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Fluxo claro, previsível e controlado. Do diagnóstico à evolução contínua, cada passo é projetado para maximizar o valor e minimizar riscos.
-              </p>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">Nossa metodologia exclusiva garante eficiência, transparência e entregas de alto impacto em cada etapa do projeto.</p>
             </div>
-
             {/* Timeline */}
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#00F0FF] to-[#9442FE]"></div>
+            <div className="relative flex flex-col items-center">
+              {/* Linha vertical neon */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-0 w-1 bg-gradient-to-b from-[#00F0FF] via-[#9442FE] via-[#FFD600] to-[#00FF85] rounded-full z-0" style={{ height: 'calc(100% - 80px)' }}></div>
 
-              {/* Timeline Items */}
-              <div className="space-y-24">
-                {/* Item 1 - Left */}
-                <div className="flex items-center group">
-                  <div className="w-1/2 pr-16 text-right float-left transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#00F0FF] border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.3)] text-glow">1-2 dias úteis</span>
+              {/* Fase 1 - Direita */}
+              <div className="relative w-full flex mb-16">
+                <div className="w-1/2 flex justify-end pr-8 items-center">
+                  <div className="border-2 border-[#3BA3FF] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #3BA3FF, 0 0 8px 2px #3BA3FF' }}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Fase 1</span>
+                      <span className="text-xs text-[#A3B8D8] font-bold">Semana 1-2</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Diagnóstico e Imersão</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Mergulhamos no seu negócio para entender processos, dores e oportunidades.
-                    </p>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#00F0FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
-                        </svg>
-                      </div>
+                    <div className="font-bold text-2xl mb-2">Fundamentos & Análise</div>
+                    <div className="text-[#A3B8D8] mb-4">Compreensão profunda do negócio e definição da arquitetura do agente.</div>
+                    <div className="font-bold mb-1">Atividades:</div>
+                    <ul className="mb-4 space-y-1">
+                      <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Análise de processos e fluxos existentes</li>
+                      <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Mapeamento de integrações necessárias</li>
+                      <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Definição da personalidade do agente</li>
+                      <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Estruturação da base de conhecimento</li>
+                    </ul>
+                    <hr className="border-[#22304A] mb-3" />
+                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Documento de Arquitetura</span>
+                      <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Wireframes de Conversação</span>
+                      <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Estratégia de Dados</span>
                     </div>
-                  </div>
-                  <div className="w-1/2"></div>
-                </div>
-
-                {/* Item 2 - Right */}
-                <div className="flex items-center group">
-                  <div className="w-1/2"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#9442FE]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-1/2 pl-16 float-right transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#9442FE] border border-[#9442FE]/30 shadow-[0_0_10px_rgba(148,66,254,0.3)] text-glow-purple">3 dias úteis</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Criação de MVP Funcional</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Desenvolvemos rapidamente um agente inicial que demonstra valor imediato.
-                    </p>
                   </div>
                 </div>
-
-                {/* Item 3 - Left */}
-                <div className="flex items-center group">
-                  <div className="w-1/2 pr-16 text-right float-left transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#00F0FF] border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.3)] text-glow">5-10 dias úteis</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Integração Estratégica</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Conectamos o agente aos seus sistemas e canais com segurança total.
-                    </p>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#00F0FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-1/2"></div>
-                </div>
-
-                {/* Item 4 - Right */}
-                <div className="flex items-center group">
-                  <div className="w-1/2"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#9442FE]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-1/2 pl-16 float-right transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#9442FE] border border-[#9442FE]/30 shadow-[0_0_10px_rgba(148,66,254,0.3)] text-glow-purple">Contínuo</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Treinamento Personalizado</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Alimentamos o agente com dados reais, calibrando linguagem e decisões.
-                    </p>
+                {/* Ícone central azul */}
+                <div className="flex flex-col items-center z-10 justify-center w-32">
+                  <div className="w-16 h-16 rounded-full bg-[#3BA3FF] flex items-center justify-center text-white text-3xl font-bold shadow-lg border-4 border-[#10192B]">
+                    <svg xmlns='http://www.w3.org/2000/svg' className='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4.5c-4.5 0-8.25 2.25-8.25 5.25 0 1.5 1.5 2.25 2.25 2.25.75 0 1.5-.75 1.5-1.5s-.75-1.5-1.5-1.5c-.75 0-1.5.75-1.5 1.5 0 3 3.75 5.25 8.25 5.25s8.25-2.25 8.25-5.25c0-.75-.75-1.5-1.5-1.5s-1.5.75-1.5 1.5.75 1.5 1.5 1.5c.75 0 2.25-.75 2.25-2.25 0-3-3.75-5.25-8.25-5.25z' /></svg>
                   </div>
                 </div>
+                <div className="w-1/2"></div>
+              </div>
 
-                {/* Item 5 - Left */}
-                <div className="flex items-center group">
-                  <div className="w-1/2 pr-16 text-right float-left transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#00F0FF] border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.3)] text-glow">2 dias úteis</span>
+              {/* Fase 2 - Esquerda */}
+              <div className="relative w-full flex mb-16">
+                <div className="w-1/2"></div>
+                <div className="w-1/2 flex justify-start pl-8 items-center">
+                  <div className="border-2 border-[#9442FE] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #9442FE, 0 0 8px 2px #9442FE' }}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Fase 2</span>
+                      <span className="text-xs text-[#C3A3D8] font-bold">Semana 3-4</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Implementação Progressiva</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Implantamos em fases, garantindo adaptação e evolução contínua.
-                    </p>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#00F0FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-1/2"></div>
-                </div>
-
-                {/* Item 6 - Right */}
-                <div className="flex items-center group">
-                  <div className="w-1/2"></div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#9442FE]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                      </div>
+                    <div className="font-bold text-2xl mb-2">Desenvolvimento & Treinamento</div>
+                    <div className="text-[#C3A3D8] mb-4">Construção do agente com código personalizado e treinamento inicial.</div>
+                    <div className="font-bold mb-1">Atividades:</div>
+                    <ul className="mb-4 space-y-1">
+                      <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Desenvolvimento em código puro ou No-Code</li>
+                      <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Implementação de integrações</li>
+                      <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Treinamento com dados específicos</li>
+                      <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Configuração de infraestrutura dedicada</li>
+                    </ul>
+                    <hr className="border-[#2B1A4D] mb-3" />
+                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Agente Funcional (Beta)</span>
+                      <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Dashboard de Monitoramento</span>
+                      <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Documentação Técnica</span>
                     </div>
                   </div>
-                  <div className="w-1/2 pl-16 float-right transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#9442FE] border border-[#9442FE]/30 shadow-[0_0_10px_rgba(148,66,254,0.3)] text-glow-purple">Contínuo</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Monitoramento Inteligente</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Dashboards personalizados com métricas reais de impacto.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Item 7 - Left */}
-                <div className="flex items-center group">
-                  <div className="w-1/2 pr-16 text-right float-left transition-all duration-500 ease-in-out">
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 bg-black/50 rounded-full text-sm text-[#00F0FF] border border-[#00F0FF]/30 shadow-[0_0_10px_rgba(0,240,255,0.3)] text-glow">Contínuo</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow">Suporte e Evolução</h3>
-                    <p className="text-gray-300 transition-all duration-300 group-hover:text-white">
-                      Manutenção, atualizações e suporte completo para crescimento.
-                    </p>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#9442FE] p-[2px] shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(148,66,254,0.5)]">
-                      <div className="w-full h-full rounded-xl bg-black flex items-center justify-center">
-                        <svg className="w-6 h-6 text-[#00F0FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-1/2"></div>
                 </div>
               </div>
 
-              {/* Timeline Footer with enhanced glow */}
-              <div className="relative mt-32">
-                <div className="absolute inset-0 bg-gradient-to-b from-[#00F0FF]/5 to-[#9442FE]/5 blur-3xl rounded-3xl"></div>
-                <div className="relative p-8 rounded-3xl bg-black/40 backdrop-blur-xl border border-[#00F0FF]/10 shadow-[0_0_30px_rgba(0,240,255,0.1)] transform -translate-y-8 hover:-translate-y-10 transition-all duration-500">
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-                    <div className="w-24 h-1 bg-gradient-to-r from-[#00F0FF] to-[#9442FE] rounded-full shadow-[0_0_20px_rgba(0,240,255,0.5)]"></div>
+              {/* Fase 3 - Direita */}
+              <div className="relative w-full flex mb-16">
+                <div className="w-1/2 flex justify-end pr-8 items-center">
+                  <div className="border-2 border-[#FFD600] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #FFD600, 0 0 8px 2px #FFD600' }}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Fase 3</span>
+                      <span className="text-xs text-[#E8E6B8] font-bold">Semana 5-6</span>
+                    </div>
+                    <div className="font-bold text-2xl mb-2">Testes & Refinamento</div>
+                    <div className="text-[#E8E6B8] mb-4">Testes intensivos e otimização baseada em performance real.</div>
+                    <div className="font-bold mb-1">Atividades:</div>
+                    <ul className="mb-4 space-y-1">
+                      <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Testes de stress e performance</li>
+                      <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Ajuste fino de respostas</li>
+                      <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Validação de segurança</li>
+                      <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Otimização de conversões</li>
+                    </ul>
+                    <hr className="border-[#2B2B1A] mb-3" />
+                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Relatório de Performance</span>
+                      <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Agente Otimizado</span>
+                      <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Checklist de Qualidade</span>
+                    </div>
                   </div>
-                  <h3 className="text-3xl font-bold text-center mb-6">
-                    <span className="bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-transparent bg-clip-text text-glow relative">
-                      Timeline Total: 10 a 17 dias
-                      <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-[#00F0FF]/0 via-[#00F0FF]/50 to-[#9442FE]/0"></div>
-                    </span>
-                  </h3>
-                  <p className="text-gray-300 text-center max-w-4xl mx-auto group-hover:text-white transition-all duration-300">
-                    Do primeiro contato à entrega completa, nosso processo otimizado garante que você tenha um agente inteligente funcionando em menos de 3 semanas, com suporte contínuo para evolução.
-                  </p>
                 </div>
+                <div className="flex flex-col items-center z-10 justify-center w-32">
+                  <div className="w-16 h-16 rounded-full bg-[#FFD600] flex items-center justify-center text-white text-3xl font-bold shadow-lg border-4 border-[#1A1A14]">
+                    <svg xmlns='http://www.w3.org/2000/svg' className='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><circle cx='12' cy='12' r='8' stroke='currentColor' strokeWidth='2' fill='none'/><circle cx='12' cy='12' r='3' fill='currentColor'/></svg>
+                  </div>
+                </div>
+                <div className="w-1/2"></div>
+              </div>
+
+              {/* Fase 4 - Esquerda */}
+              <div className="relative w-full flex mb-16">
+                <div className="w-1/2"></div>
+                <div className="w-1/2 flex justify-start pl-8 items-center">
+                  <div className="border-2 border-[#00FF85] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #00FF85, 0 0 8px 2px #00FF85' }}>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Fase 4</span>
+                      <span className="text-xs text-[#A3D8B8] font-bold">Semana 7+</span>
+                    </div>
+                    <div className="font-bold text-2xl mb-2">Deploy & Monitoramento</div>
+                    <div className="text-[#A3D8B8] mb-4">Lançamento em produção com monitoramento contínuo e suporte dedicado.</div>
+                    <div className="font-bold mb-1">Atividades:</div>
+                    <ul className="mb-4 space-y-1">
+                      <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Deploy em ambiente de produção</li>
+                      <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Configuração de alertas</li>
+                      <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Treinamento da equipe</li>
+                      <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Monitoramento de KPIs</li>
+                    </ul>
+                    <hr className="border-[#1A4D2B] mb-3" />
+                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Agente em Produção</span>
+                      <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Manual de Operação</span>
+                      <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Suporte Contínuo 24/7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Botão CTA */}
+              <div className="flex justify-center w-full relative" style={{ zIndex: 2 }}>
+                <a href="#contato" className="neon-button px-10 py-4 rounded-full text-lg font-bold shadow-lg mt-24 block">Quero acelerar meus resultados</a>
               </div>
             </div>
           </div>
-
-          {/* Enhanced decorative elements */}
-          <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-[#00F0FF]/10 blur-[100px] rounded-full animate-pulse"></div>
-          <div className="absolute -right-20 -top-20 w-64 h-64 bg-[#9442FE]/10 blur-[100px] rounded-full animate-pulse"></div>
         </section>
 
         {/* Featured Agents Section */}
@@ -1190,7 +791,7 @@ const IconComponent = ({ name, className }) => {
       return (
         <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24">
           <motion.path
-            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            d="M12 2l3.09 6.26L22 9.27l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
             stroke="currentColor"
             strokeWidth={1.5}
             strokeLinecap="round"
