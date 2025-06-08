@@ -135,7 +135,7 @@ export default function Home() {
         </section>
 
         {/* Produtos & Serviços Section */}
-        <section className="py-24 bg-black relative overflow-hidden">
+        <section id="produtos-servicos" className="py-24 bg-black relative overflow-hidden">
           {/* Glow de fundo */}
           <div className="absolute -left-32 -top-32 w-96 h-96 bg-[#00f0ff]/10 blur-[120px] rounded-full pointer-events-none"></div>
           <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-[#9442fe]/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -214,7 +214,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <button className="w-full max-w-xs mx-auto mb-0 px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all mt-auto">
+                  <button
+                    className="w-full max-w-xs mx-auto mb-0 px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all mt-auto"
+                    onClick={() => {
+                      const el = document.getElementById('produtos-servicos');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
                     Explorar Agentes Humanizados
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -261,7 +267,13 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <button className="w-full max-w-xs mx-auto mb-0 px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all mt-auto">
+                  <button
+                    className="w-full max-w-xs mx-auto mb-0 px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all mt-auto"
+                    onClick={() => {
+                      const el = document.getElementById('produtos-servicos');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
                     Explorar Produtos SaaS
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -288,16 +300,16 @@ export default function Home() {
               <div className="absolute left-1/2 -translate-x-1/2 top-0 w-1 bg-gradient-to-b from-[#00F0FF] via-[#9442FE] via-[#FFD600] to-[#00FF85] rounded-full z-0" style={{ height: 'calc(100% - 80px)' }}></div>
 
               {/* Fase 1 - Direita */}
-              <div className="relative w-full flex mb-16">
-                <div className="w-1/2 flex justify-end pr-8 items-center">
-                  <div className="border-2 border-[#3BA3FF] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #3BA3FF, 0 0 8px 2px #3BA3FF' }}>
-                    <div className="flex justify-between items-center mb-2">
+              <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
+                <div className="w-full md:w-1/2 flex justify-center md:justify-end md:pr-8 items-center mb-4 md:mb-0">
+                  <div className="border-2 border-[#3BA3FF] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #3BA3FF, 0 0 8px 2px #3BA3FF' }}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Fase 1</span>
                       <span className="text-xs text-[#A3B8D8] font-bold">Semana 1-2</span>
                     </div>
-                    <div className="font-bold text-2xl mb-2">Fundamentos & Análise</div>
-                    <div className="text-[#A3B8D8] mb-4">Compreensão profunda do negócio e definição da arquitetura do agente.</div>
-                    <div className="font-bold mb-1">Atividades:</div>
+                    <div className="font-bold text-lg md:text-2xl mb-2">Fundamentos & Análise</div>
+                    <div className="text-[#A3B8D8] mb-4 text-sm md:text-base">Compreensão profunda do negócio e definição da arquitetura do agente.</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Atividades:</div>
                     <ul className="mb-4 space-y-1">
                       <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Análise de processos e fluxos existentes</li>
                       <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Mapeamento de integrações necessárias</li>
@@ -305,7 +317,7 @@ export default function Home() {
                       <li className="flex items-center gap-2 text-[#A3B8D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Estruturação da base de conhecimento</li>
                     </ul>
                     <hr className="border-[#22304A] mb-3" />
-                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Entregas:</div>
                     <div className="flex flex-wrap gap-2">
                       <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Documento de Arquitetura</span>
                       <span className="bg-[#1A2B4D] text-[#3BA3FF] px-3 py-1 rounded-full text-xs font-semibold">Wireframes de Conversação</span>
@@ -314,26 +326,25 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Ícone central azul */}
-                <div className="flex flex-col items-center z-10 justify-center w-32">
-                  <div className="w-16 h-16 rounded-full bg-[#3BA3FF] flex items-center justify-center text-white text-3xl font-bold shadow-lg border-4 border-[#10192B]">
-                    <svg xmlns='http://www.w3.org/2000/svg' className='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4.5c-4.5 0-8.25 2.25-8.25 5.25 0 1.5 1.5 2.25 2.25 2.25.75 0 1.5-.75 1.5-1.5s-.75-1.5-1.5-1.5c-.75 0-1.5.75-1.5 1.5 0 3 3.75 5.25 8.25 5.25s8.25-2.25 8.25-5.25c0-.75-.75-1.5-1.5-1.5s-1.5.75-1.5 1.5.75 1.5 1.5 1.5c.75 0 2.25-.75 2.25-2.25 0-3-3.75-5.25-8.25-5.25z' /></svg>
+                <div className="flex flex-col items-center z-10 justify-center w-full md:w-32 my-6 md:my-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#3BA3FF] flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-[#10192B] mx-auto">
+                    <svg xmlns='http://www.w3.org/2000/svg' className='w-7 h-7 md:w-8 md:h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4.5c-4.5 0-8.25 2.25-8.25 5.25 0 1.5 1.5 2.25 2.25 2.25.75 0 1.5-.75 1.5-1.5s-.75-1.5-1.5-1.5c-.75 0-1.5.75-1.5 1.5 0 3 3.75 5.25 8.25 5.25s8.25-2.25 8.25-5.25c0-.75-.75-1.5-1.5-1.5s-1.5.75-1.5 1.5.75 1.5 1.5 1.5c.75 0 2.25-.75 2.25-2.25 0-3-3.75-5.25-8.25-5.25z' /></svg>
                   </div>
                 </div>
-                <div className="w-1/2"></div>
               </div>
 
               {/* Fase 2 - Esquerda */}
-              <div className="relative w-full flex mb-16">
+              <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
                 <div className="w-1/2"></div>
                 <div className="w-1/2 flex justify-start pl-8 items-center">
-                  <div className="border-2 border-[#9442FE] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #9442FE, 0 0 8px 2px #9442FE' }}>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="border-2 border-[#9442FE] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #9442FE, 0 0 8px 2px #9442FE' }}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Fase 2</span>
                       <span className="text-xs text-[#C3A3D8] font-bold">Semana 3-4</span>
                     </div>
-                    <div className="font-bold text-2xl mb-2">Desenvolvimento & Treinamento</div>
-                    <div className="text-[#C3A3D8] mb-4">Construção do agente com código personalizado e treinamento inicial.</div>
-                    <div className="font-bold mb-1">Atividades:</div>
+                    <div className="font-bold text-lg md:text-2xl mb-2">Desenvolvimento & Treinamento</div>
+                    <div className="text-[#C3A3D8] mb-4 text-sm md:text-base">Construção do agente com código personalizado e treinamento inicial.</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Atividades:</div>
                     <ul className="mb-4 space-y-1">
                       <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Desenvolvimento em código puro ou No-Code</li>
                       <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Implementação de integrações</li>
@@ -341,7 +352,7 @@ export default function Home() {
                       <li className="flex items-center gap-2 text-[#C3A3D8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Configuração de infraestrutura dedicada</li>
                     </ul>
                     <hr className="border-[#2B1A4D] mb-3" />
-                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Entregas:</div>
                     <div className="flex flex-wrap gap-2">
                       <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Agente Funcional (Beta)</span>
                       <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Dashboard de Monitoramento</span>
@@ -352,16 +363,16 @@ export default function Home() {
               </div>
 
               {/* Fase 3 - Direita */}
-              <div className="relative w-full flex mb-16">
+              <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
                 <div className="w-1/2 flex justify-end pr-8 items-center">
-                  <div className="border-2 border-[#FFD600] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #FFD600, 0 0 8px 2px #FFD600' }}>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="border-2 border-[#FFD600] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #FFD600, 0 0 8px 2px #FFD600' }}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Fase 3</span>
                       <span className="text-xs text-[#E8E6B8] font-bold">Semana 5-6</span>
                     </div>
-                    <div className="font-bold text-2xl mb-2">Testes & Refinamento</div>
-                    <div className="text-[#E8E6B8] mb-4">Testes intensivos e otimização baseada em performance real.</div>
-                    <div className="font-bold mb-1">Atividades:</div>
+                    <div className="font-bold text-lg md:text-2xl mb-2">Testes & Refinamento</div>
+                    <div className="text-[#E8E6B8] mb-4 text-sm md:text-base">Testes intensivos e otimização baseada em performance real.</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Atividades:</div>
                     <ul className="mb-4 space-y-1">
                       <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Testes de stress e performance</li>
                       <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Ajuste fino de respostas</li>
@@ -369,7 +380,7 @@ export default function Home() {
                       <li className="flex items-center gap-2 text-[#E8E6B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Otimização de conversões</li>
                     </ul>
                     <hr className="border-[#2B2B1A] mb-3" />
-                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Entregas:</div>
                     <div className="flex flex-wrap gap-2">
                       <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Relatório de Performance</span>
                       <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Agente Otimizado</span>
@@ -377,26 +388,25 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-center z-10 justify-center w-32">
-                  <div className="w-16 h-16 rounded-full bg-[#FFD600] flex items-center justify-center text-white text-3xl font-bold shadow-lg border-4 border-[#1A1A14]">
-                    <svg xmlns='http://www.w3.org/2000/svg' className='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><circle cx='12' cy='12' r='8' stroke='currentColor' strokeWidth='2' fill='none'/><circle cx='12' cy='12' r='3' fill='currentColor'/></svg>
+                <div className="flex flex-col items-center z-10 justify-center w-full md:w-32 my-6 md:my-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#FFD600] flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-[#1A1A14] mx-auto">
+                    <svg xmlns='http://www.w3.org/2000/svg' className='w-7 h-7 md:w-8 md:h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><circle cx='12' cy='12' r='8' stroke='currentColor' strokeWidth='2' fill='none'/><circle cx='12' cy='12' r='3' fill='currentColor'/></svg>
                   </div>
                 </div>
-                <div className="w-1/2"></div>
               </div>
 
               {/* Fase 4 - Esquerda */}
-              <div className="relative w-full flex mb-16">
+              <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
                 <div className="w-1/2"></div>
                 <div className="w-1/2 flex justify-start pl-8 items-center">
-                  <div className="border-2 border-[#00FF85] rounded-2xl p-8 max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #00FF85, 0 0 8px 2px #00FF85' }}>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="border-2 border-[#00FF85] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #00FF85, 0 0 8px 2px #00FF85' }}>
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Fase 4</span>
                       <span className="text-xs text-[#A3D8B8] font-bold">Semana 7+</span>
                     </div>
-                    <div className="font-bold text-2xl mb-2">Deploy & Monitoramento</div>
-                    <div className="text-[#A3D8B8] mb-4">Lançamento em produção com monitoramento contínuo e suporte dedicado.</div>
-                    <div className="font-bold mb-1">Atividades:</div>
+                    <div className="font-bold text-lg md:text-2xl mb-2">Deploy & Monitoramento</div>
+                    <div className="text-[#A3D8B8] mb-4 text-sm md:text-base">Lançamento em produção com monitoramento contínuo e suporte dedicado.</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Atividades:</div>
                     <ul className="mb-4 space-y-1">
                       <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Deploy em ambiente de produção</li>
                       <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Configuração de alertas</li>
@@ -404,7 +414,7 @@ export default function Home() {
                       <li className="flex items-center gap-2 text-[#A3D8B8]"><svg className="w-5 h-5" fill="none" stroke="#00FF85" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Monitoramento de KPIs</li>
                     </ul>
                     <hr className="border-[#1A4D2B] mb-3" />
-                    <div className="font-bold mb-1">Entregas:</div>
+                    <div className="font-bold mb-1 text-sm md:text-base">Entregas:</div>
                     <div className="flex flex-wrap gap-2">
                       <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Agente em Produção</span>
                       <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Manual de Operação</span>
