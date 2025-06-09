@@ -79,6 +79,22 @@
               0 0 40px rgba(148, 66, 254, 0.3);
 }
 
+/* Neon border effect para o botão 'Teste na Prática' - versão mais discreta */
+.neon-border {
+  box-shadow:
+    0 0 4px #00f0ff,
+    0 0 8px #00f0ff80;
+  border-color: #00f0ff !important;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.neon-border:hover {
+  box-shadow:
+    0 0 8px #00f0ff,
+    0 0 16px #00f0ff80;
+  border-color: #fff !important;
+}
+
 /* Estilos Base */
 body {
   background: #050505;

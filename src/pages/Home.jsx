@@ -141,11 +141,11 @@ export default function Home() {
           <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-[#9442fe]/10 blur-[120px] rounded-full pointer-events-none"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-[#00f0ff]/30 shadow-[0_0_12px_#00f0ff40]">
+              <div className="inline-flex items-center px-4 py-2 rounded-full border neon-border">
                 <span className="mr-2 flex items-center">
                   <BarChart3 className="w-5 h-5 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" strokeWidth={2.2} />
                 </span>
-                <span className="text-sm text-white/90">Produtos & Serviços</span>
+                <span className="text-sm text-white/90">Produtos e Serviços</span>
               </div>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,240,255,0.3)]">
@@ -318,15 +318,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Compromisso de Segurança */}
-            <div className="mt-8 bg-black/60 rounded-2xl p-8 border border-white/10 flex flex-col items-center">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">🔐</span>
-                <span className="text-lg font-bold text-white">Compromisso com segurança e privacidade</span>
-              </div>
-              <p className="text-gray-300 text-center max-w-3xl mb-2">Toda a estrutura da Ugarit aplica criptografia de camada dupla, com VPS individual por cliente, isolamento total de dados e logs auditáveis.<br/>Você não compartilha risco com ninguém. Proteção real, sem jargões.</p>
-            </div>
-
             {/* Frase de Fechamento */}
             <div className="mt-8 flex justify-center">
               <span className="text-xl text-white text-center flex items-center gap-2">
@@ -356,7 +347,13 @@ export default function Home() {
           <div className="container mx-auto px-4">
             {/* Header */}
             <div className="text-center mb-16">
-              <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-[#00F0FF] to-[#9442FE] text-white/90 font-semibold text-sm mb-6 shadow-lg">Metodologia de Entrega</div>
+              <div className="inline-flex items-center px-6 py-2 rounded-full border neon-border text-white/90 font-semibold text-sm mb-6 shadow-lg">
+                <span className="mr-2 flex items-center">
+                  {/* Ícone neon */}
+                  <svg className="w-5 h-5 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </span>
+                Metodologia de Entrega
+              </div>
               <h2 className="text-5xl font-extrabold mb-4 neon-gradient-text">
                 Como entregamos resultados
               </h2>
@@ -490,38 +487,52 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20"
+                  className="inline-flex items-center px-4 py-2 rounded-full border neon-border"
                 >
-                  <span className="text-sm text-white/90">Produtos e Serviços</span>
+                  <span className="mr-2 flex items-center">
+                    {/* Ícone neon */}
+                    <svg className="w-5 h-5 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  </span>
+                  <span className="text-sm text-white/90">Teste na Prática</span>
                 </motion.div>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
                 <span className="text-[#6B8AFF]">Agentes Humanizados</span>{" "}
-                <span className="text-white">sob medida</span>
+                <span className="text-white">em Ação</span>
               </h2>
               <p className="text-xl text-gray-300">
-                Cada agente é único, construído como uma peça de engenharia viva. Não entregamos "bots genéricos" — desenhamos mentes digitais para executar tarefas com precisão, autonomia e inteligência.
+                Cada agente é único, desenhado com lógica de negócio e linguagem personalizada.<br/>
+                Testes reais, sem bots genéricos — veja como a inteligência aplicada funciona no seu fluxo.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <AgentCard
-                title="Monitoramento de Transações"
-                description="Monitora transações em tempo real e envia alertas para comportamentos suspeitos."
-                image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                title="Qualificação e Agendamento Inteligente"
+                description="Qualifica leads, entende necessidades e sugere horários de reunião — com empatia e lógica."
+                interaction={["Pergunta: nome, segmento, volume de atendimentos", "Classifica perfil", "Sugere agenda e permite remarcar"]}
+                tooltip="SDR que pensa, pergunta e agenda — sem depender de humanos."
+                buttonText="Quero testar o SDR"
+                image="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
                 delay={0}
               />
               <AgentCard
-                title="Atendimento Automático"
-                description="Responde a solicitações de clientes 24/7 integrando-se a canais de comunicação."
+                title="Recomendação com Inteligência Comercial"
+                description="Analisa o perfil do lead, recomenda a melhor solução e responde objeções em tempo real."
+                interaction={["Lead descreve necessidade", "Agente sugere plano/serviço", "Justifica escolha e convida para proposta ou contratação"]}
+                tooltip="Inteligência treinada para vender com dados, não com scripts."
+                buttonText="Falar com o Agente de Vendas"
                 image="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80"
                 delay={0.2}
               />
               <AgentCard
-                title="Integração com Firebase"
-                description="Sincroniza dados entre Firebase e outras plataformas em tempo real."
-                image="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                title="Resultados em Tempo Real"
+                description="Veja como nossos agentes impactam negócios com dados reais e métricas visuais."
+                interaction={["Tempo médio de resposta", "Taxa de qualificação", "Conversões com IA", "Redução de atendimento manual"]}
+                tooltip="Performance não se promete — se mede."
+                buttonText="Ver Dashboard em Ação"
+                image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
                 delay={0.4}
               />
             </div>
@@ -539,7 +550,7 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 border border-[#00f0ff]/30 text-white font-medium rounded-full flex items-center mx-auto space-x-2"
                 >
-                  <span>Ver Portfólio Completo</span>
+                  <span>Ver Portfólio Completo →</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
               </Link>
@@ -843,18 +854,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        {/* Compromisso de Segurança */}
-        <div className="mt-8 bg-black/60 rounded-2xl p-8 border border-white/10 flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">🔐</span>
-            <span className="text-lg font-bold text-white">Compromisso com segurança e privacidade</span>
-          </div>
-          <p className="text-gray-300 text-center max-w-3xl mb-2">Toda a estrutura da Ugarit aplica criptografia de camada dupla, com VPS individual por cliente, isolamento total de dados e logs auditáveis.<br/>Você não compartilha risco com ninguém. Proteção real, sem jargões.</p>
-        </div>
-        {/* Frase de Fechamento */}
-        <div className="mt-8 flex justify-center">
-          <span className="text-xl text-white text-center flex items-center gap-2"><span className="text-2xl">🎯</span> Automação boa não é só a que funciona — é a que respeita seu fluxo, sua marca e os dados do seu cliente.</span>
         </div>
       </div>
     </>
