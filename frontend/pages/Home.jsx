@@ -116,6 +116,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 border border-[#00f0ff]/30 text-white font-medium rounded-full flex items-center space-x-2 group hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] transition-all duration-300"
+                  onClick={() => window.gtmTrack('clique_diagnostico')}
                 >
                   <span>Quero um diagnóstico gratuito</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -125,6 +126,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-white text-black font-medium rounded-full flex items-center space-x-2 group hover:bg-opacity-90 transition-all duration-300"
+                  onClick={() => window.gtmTrack('clique_saiba_mais')}
                 >
                   <span>Saiba Mais</span>
                   <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
@@ -187,10 +189,7 @@ export default function Home() {
                   <div className="flex flex-col gap-3">
                     <button
                       className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all"
-                      onClick={() => {
-                        const el = document.getElementById('contato');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                      }}
+                      onClick={() => { window.gtmTrack('clique_synapse'); const el = document.getElementById('contato'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}
                     >
                       🔮 Quero ver como o Synapse funciona na prática
                       <ArrowRight className="w-5 h-5" />
@@ -229,10 +228,7 @@ export default function Home() {
                   <div className="flex flex-col gap-3">
                     <button
                       className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-[#FFB86C] to-[#FF6F91] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#FFB86C60] hover:shadow-[0_0_40px_#FFB86C90] transition-all"
-                      onClick={() => {
-                        const el = document.getElementById('contato');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                      }}
+                      onClick={() => { window.gtmTrack('clique_machina'); const el = document.getElementById('contato'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}
                     >
                       ⚙️ Me envie um exemplo real do Machina
                       <ArrowRight className="w-5 h-5" />
@@ -330,10 +326,7 @@ export default function Home() {
             <div className="mt-12 flex justify-center">
               <button
                 className="px-8 py-4 rounded-full bg-gradient-to-r from-[#00f0ff] to-[#9442fe] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00f0ff60] hover:shadow-[0_0_40px_#00f0ff90] hover:scale-[1.04] transition-all"
-                onClick={() => {
-                  const el = document.getElementById('contato');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={() => window.gtmTrack('clique_agendar_diagnostico')}
               >
                 🔍 Agendar diagnóstico da minha infraestrutura SaaS
                 <ArrowRight className="w-5 h-5" />
@@ -549,6 +542,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 border border-[#00f0ff]/30 text-white font-medium rounded-full flex items-center mx-auto space-x-2"
+                  onClick={() => window.gtmTrack('clique_ver_portfolio')}
                 >
                   <span>Ver Portfólio Completo →</span>
                   <ArrowRight className="w-5 h-5" />
@@ -760,6 +754,7 @@ export default function Home() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 bg-gradient-to-r from-[#00f0ff] to-[#9442fe] text-black font-bold rounded-full whitespace-nowrap flex items-center space-x-2"
+                    onClick={() => window.gtmTrack('clique_inovar_home')}
                   >
                     <span>Quero Inovar com a Ugarit</span>
                     <Zap className="w-5 h-5" />
@@ -840,6 +835,7 @@ const AgentCard = ({ title, description, image, delay }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-medium text-sm border border-white/30 flex items-center space-x-2"
+            onClick={() => window.gtmTrack('clique_ver_em_acao')}
           >
             <span>Ver em ação</span>
             <ArrowRight className="w-4 h-4" />

@@ -316,7 +316,7 @@ export default function Portfolio() {
                             <motion.button
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}
-                              onClick={handleOpenChat}
+                              onClick={() => { handleOpenChat(); window.gtmTrack('clique_solicitar_agente', { agente: selectedAgent?.title }); }}
                               className="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-black bg-gradient-to-r from-[#00f0ff] to-[#9442fe] hover:from-[#00d0df] hover:to-[#8432ee] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00f0ff]/50 transition-all duration-300"
                             >
                               Solicitar Este Agente
@@ -345,7 +345,7 @@ export default function Portfolio() {
             {categories.map((category) => (
               <button
                 key={category.id}
-                onClick={() => setFilter(category.id)}
+                onClick={() => { setFilter(category.id); window.gtmTrack('clique_filtro_categoria', { categoria: category.name }); }}
                 className={`px-4 py-2 mb-2 rounded-full text-sm font-medium transition-colors duration-200 ${
                   filter === category.id
                     ? "bg-gradient-to-r from-[#00f0ff] to-[#9442fe] text-black"
@@ -372,7 +372,7 @@ export default function Portfolio() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
                   className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg border border-gray-800 flex flex-col h-full group cursor-pointer"
-                  onClick={() => handleAgentClick(agent)}
+                  onClick={() => { handleAgentClick(agent); window.gtmTrack('clique_ver_detalhes', { agente: agent.title }); }}
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img

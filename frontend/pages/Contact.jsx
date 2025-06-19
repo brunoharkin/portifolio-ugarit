@@ -177,7 +177,7 @@ export default function Contact() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsSuccess(false)}
+                    onClick={() => { setIsSuccess(false); window.gtmTrack('clique_enviar_outra_mensagem'); }}
                     className="px-6 py-3 bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 border border-[#00f0ff]/30 text-white font-medium rounded-full"
                   >
                     Enviar outra mensagem
@@ -188,7 +188,7 @@ export default function Contact() {
                   <h2 className="text-2xl font-bold mb-6">Quero Inovar com a Ugarit</h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
                       <FormInput
                         label="Nome"
                         name="name"
@@ -207,7 +207,7 @@ export default function Contact() {
                         required
                       />
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
                       <FormInput
                         label="Telefone"
                         name="phone"
@@ -225,13 +225,12 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                      <label className="block text-white mb-2">Tipo de Agente</label>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                      <label className="block text-white mb-2 text-base sm:text-lg">Tipo de Agente</label>
+                      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
                         {agentTypes.map(type => (
                           <label 
                             key={type.id} 
-                            className={`
-                              px-4 py-3 rounded-lg border cursor-pointer transition-all flex items-center
+                            className={`px-4 py-3 rounded-lg border cursor-pointer transition-all flex items-center text-sm sm:text-base
                               ${formData.agentType === type.id 
                                 ? "border-[#00f0ff] bg-[#00f0ff]/10" 
                                 : "border-gray-700 bg-gray-800/30 hover:border-gray-600"}
@@ -252,14 +251,14 @@ export default function Contact() {
                                   : "border-gray-500"
                               }`}
                             />
-                            <span className="text-sm">{type.name}</span>
+                            <span>{type.name}</span>
                           </label>
                         ))}
                       </div>
                     </div>
                     
                     <div>
-                      <label className="block text-white mb-2">
+                      <label className="block text-white mb-2 text-base sm:text-lg">
                         Sua Mensagem <span className="text-red-500">*</span>
                       </label>
                       <textarea
@@ -269,7 +268,7 @@ export default function Contact() {
                         rows={5}
                         className={`w-full px-4 py-3 bg-gray-800/50 border ${
                           errors.message ? "border-red-500" : "border-gray-700"
-                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00f0ff]/50 focus:border-transparent transition-all resize-none`}
+                        } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00f0ff]/50 focus:border-transparent transition-all resize-none text-base sm:text-lg`}
                         placeholder="Descreva seu desafio, ideia ou objetivo. Vamos juntos além do comum!"
                       ></textarea>
                       {errors.message && (
@@ -280,9 +279,10 @@ export default function Contact() {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full py-4 bg-gradient-to-r from-[#00f0ff] to-[#9442fe] text-black font-bold rounded-lg flex items-center justify-center disabled:opacity-70"
+                      className="w-full py-4 bg-gradient-to-r from-[#00f0ff] to-[#9442fe] text-black font-bold rounded-lg flex items-center justify-center disabled:opacity-70 text-base sm:text-lg"
                       type="submit"
                       disabled={isSubmitting}
+                      onClick={() => window.gtmTrack('envio_formulario_contato')}
                     >
                       {isSubmitting ? (
                         <>
