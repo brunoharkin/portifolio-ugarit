@@ -242,7 +242,7 @@ export default function Portfolio() {
                         // Fallback image if videoUrl is not provided
                         <img
                           src={selectedAgent.image}
-                          alt={selectedAgent.title}
+                          alt={`Agente ${selectedAgent.title} - Automação e IA`}
                           className="w-full h-full object-cover"
                         />
                       )}
@@ -335,7 +335,9 @@ export default function Portfolio() {
 
         {/* Main Content - Portfolio Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold text-center mb-4 gradient-text">Portfólio de Agentes</h1>
+          <h1 className="text-4xl font-bold text-center mb-4 gradient-text">
+            Portfólio de Agentes de Automação e IA
+          </h1>
           <p className="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
             Explore nossos agentes especializados, prontos para automatizar e otimizar diversas áreas do seu negócio.
           </p>
@@ -377,7 +379,7 @@ export default function Portfolio() {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={agent.image}
-                      alt={agent.title}
+                      alt={`Agente ${agent.title} - Automação e IA`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>

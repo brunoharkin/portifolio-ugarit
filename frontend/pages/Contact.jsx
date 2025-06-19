@@ -94,9 +94,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Vamos Conectar o <span className="gradient-text">Futuro</span> do Seu Negócio
-            </h1>
+            <h1 className="text-4xl font-bold mb-4">Contato - Fale com Especialistas em Automação e IA</h1>
             <p className="text-xl text-gray-300">
               Conte sua ideia, desafio ou sonho. Nossa equipe está pronta para criar soluções que vão além do esperado.<br />
               Fale com quem entende de automação visionária.
@@ -311,7 +309,7 @@ export default function Contact() {
             {/* Placeholder for map */}
             <div className="w-full h-full bg-gradient-to-r from-gray-900 to-black flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="w-16 h-16 text-[#00f0ff]/30 mx-auto mb-4" />
+                <MapPin className="w-16 h-16 text-[#00f0ff]/30 mx-auto mb-4" aria-label="Localização Ugarit Digital" />
                 <h3 className="text-xl font-bold text-white">Ugarit Digital</h3>
                 <p className="text-gray-400">São Paulo, SP - Brasil</p>
               </div>

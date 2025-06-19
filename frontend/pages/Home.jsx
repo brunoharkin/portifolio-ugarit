@@ -68,7 +68,7 @@ export default function Home() {
               {/* Título Principal */}
               <div className="mb-6">
                 <h1 className="text-4xl md:text-6xl font-bold mb-2">
-                  Agentes <span className="bg-gradient-to-r from-[#00f0ff] via-[#6B8AFF] to-[#9442fe] text-transparent bg-clip-text">Humanizados</span><span className="text-white"> que </span><span className="bg-gradient-to-r from-[#9442fe] via-[#FFB86C] to-[#00f0ff] text-transparent bg-clip-text">Transformam</span>
+                  Automação Inteligente e Agentes Humanizados para Empresas Inovadoras
                 </h1>
               </div>
 
