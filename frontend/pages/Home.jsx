@@ -4,7 +4,7 @@ import { createPageUrl } from "../utils";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, ArrowRight, Zap, Brain, Sparkles, BarChart3 } from "lucide-react";
 import UgaritLogo from "../assets/UgaritLogo.svg";
-import UgaritLogoImg from "../../Screenshot_2025-05-14_13.42.23-removebg-preview.png";
+import UgaritLogoImg from "../assets/Screenshot_2025-05-14_13.42.23-removebg-preview.png";
 import HeroBg from "../assets/hero-bg.svg";
 import LogoMarquee from "../components/LogoMarquee";
 import TestimonialCarousel from "../components/TestimonialCarousel";
