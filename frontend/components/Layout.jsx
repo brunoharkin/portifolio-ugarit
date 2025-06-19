@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Instagram, Linkedin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,6 +8,7 @@ import WhatsAppIcon from '../assets/icons/whatsapp.svg';
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const [loading, setLoading] = useState(true);
 
   const menuItems = [
     { title: 'Home', path: '/' },
@@ -16,6 +17,12 @@ const Layout = ({ children }) => {
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    // Simula carregamento da página
+    const timer = setTimeout(() => setLoading(false), 1800);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
@@ -30,7 +37,7 @@ const Layout = ({ children }) => {
                   width="40" 
                   height="40" 
                   viewBox="0 0 400 400" 
-                  className="opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className={`opacity-80 hover:opacity-100 transition-opacity duration-300 ${loading ? 'logo-roulette-spin' : ''}`}
                 >
                   {/* Centro */}
                   <circle 
@@ -81,7 +88,7 @@ const Layout = ({ children }) => {
                 </svg>
               </div>
               <span 
-                className="text-xl font-medium tracking-wide bg-gradient-to-r from-[#00F0FF] to-[#9442FE] bg-clip-text text-transparent"
+                className="text-xl font-medium tracking-wide logo-gradient-animated"
                 style={{ fontFamily: 'Avenir Next LT Pro, sans-serif' }}
               >
                 Ugarit Digital
@@ -115,8 +122,8 @@ const Layout = ({ children }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
-              aria-label="Toggle menu"
+              aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+              className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#00F0FF]"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -153,6 +160,21 @@ const Layout = ({ children }) => {
           )}
         </AnimatePresence>
       </header>
+
+      {/* Breadcrumbs */}
+      {location.pathname !== '/' && (
+        <nav aria-label="Breadcrumb" className="bg-black/60 px-4 py-2 text-sm text-gray-400">
+          <ol className="list-reset flex">
+            <li><Link to="/" className="hover:text-white">Home</Link></li>
+            {location.pathname === '/portfolio' && (
+              <li><span className="mx-2">/</span><span className="text-white">Portfolio</span></li>
+            )}
+            {location.pathname === '/contact' && (
+              <li><span className="mx-2">/</span><span className="text-white">Contato</span></li>
+            )}
+          </ol>
+        </nav>
+      )}
 
       {/* Main Content */}
       <main className="flex-grow pt-16 md:pt-20">

@@ -25,9 +25,15 @@
   }
 
   .typewriter-cursor {
-    @apply inline-block ml-0;
-    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink-cursor 1s steps(1) infinite;
   }
+}
+
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 /* Efeitos Neon */
@@ -96,8 +102,7 @@
 }
 
 /* Estilos Base */
-body {
-  background: #050505;
+body, .text-white, .headline-white {
   color: #fff;
 }
 
@@ -178,4 +183,158 @@ body {
 }
 .animate-load-bar {
   animation: loadBar 1.5s ease-out forwards, pulse 2s ease-in-out infinite;
+}
+
+.neon-animated-border {
+  border-radius: 9999px;
+  border: 2px solid #00f0ff;
+  box-shadow:
+    0 0 4px #00f0ff,
+    0 0 8px #00f0ff,
+    0 0 16px #00f0ff;
+  animation: neon-pulse 1.6s infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    box-shadow:
+      0 0 4px #00f0ff,
+      0 0 8px #00f0ff,
+      0 0 16px #00f0ff;
+  }
+  to {
+    box-shadow:
+      0 0 8px #00f0ff,
+      0 0 16px #00f0ff,
+      0 0 32px #00f0ff;
+  }
+}
+
+.gradient-headline {
+  background: linear-gradient(90deg, #5bb6ff 10%, #b97cff 50%, #ffc14d 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: animated-gradient 4s linear infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes animated-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.laser-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.laser-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  pointer-events: none;
+  z-index: 2;
+  background: none;
+}
+.laser-btn::after {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 3;
+  background: linear-gradient(90deg, transparent 0%, #00f0ff 40%, #00f0ff 60%, transparent 100%);
+  filter: blur(1.5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: laser-border-move 2s linear infinite;
+  opacity: 0.8;
+}
+@keyframes laser-border-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.neon-pulse-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 28px;
+  border-radius: 9999px;
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border: 2px solid #00f0ff;
+  box-shadow:
+    0 0 4px #00f0ff,
+    0 0 8px #00f0ff,
+    0 0 16px #00f0ff;
+  transition: box-shadow 0.3s, transform 0.2s;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  animation: neon-pulse-btn-anim 1.6s infinite alternate;
+}
+
+@keyframes neon-pulse-btn-anim {
+  from {
+    box-shadow:
+      0 0 4px #00f0ff,
+      0 0 8px #00f0ff,
+      0 0 16px #00f0ff;
+  }
+  to {
+    box-shadow:
+      0 0 8px #00f0ff,
+      0 0 16px #00f0ff,
+      0 0 32px #00f0ff;
+  }
+}
+
+@keyframes logo-roulette-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.logo-roulette-spin {
+  animation: logo-roulette-spin 1.2s cubic-bezier(0.6,0.2,0.4,1) infinite;
+}
+
+.logo-gradient-animated {
+  background: linear-gradient(90deg, #00f0ff 10%, #9442fe 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: logo-gradient-move 3.5s linear infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes logo-gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 } 
