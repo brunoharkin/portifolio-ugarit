@@ -223,7 +223,7 @@ export default function Home() {
                     <div className="bg-[#FFB86C]/5 rounded-xl p-4 border border-[#FFB86C]/20 mb-6 flex items-center gap-2">
                       <span className="text-2xl">🧩</span>
                       <span className="text-[#FFB86C] font-semibold">Impacto real:</span>
-                      <span className="text-gray-200">Automatize com lógica real, sem perder o comando.</span>
+                      <span className="text-gray-200">Menos dependência de tarefas manuais. Mais tempo e controle para o que importa.</span>
                     </div>
                   </div>
                   <div className="flex flex-col gap-3">
@@ -769,92 +769,6 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-
-        {/* Bloco Final – Ugarit Synapse + Ugarit Machina */}
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Card Synapse */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#00f0ff]/40 bg-black/80 group transition-all duration-300 hover:shadow-[0_0_40px_#00f0ffcc] hover:border-[#00f0ff] hover:scale-[1.025] flex flex-col h-full justify-between">
-            <div className="flex items-center gap-3 px-8 py-6">
-              <span className="text-3xl">🧠</span>
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#00f0ff] to-[#9442fe] bg-clip-text text-transparent drop-shadow-[0_0_8px_#00f0ff]">Ugarit Synapse</span>
-            </div>
-            {/* Para quem é */}
-            <div className="flex items-center gap-2 px-8 pb-2">
-              <span className="text-[#00f0ff] text-lg">📌</span>
-              <span className="text-sm text-[#00f0ff] font-semibold">Ideal para operações multicanal com atendimento recorrente</span>
-            </div>
-            <div className="flex-1 flex flex-col px-8 py-6 justify-between">
-              <div>
-                <p className="text-gray-200 mb-6">CRM conversacional com IA que fala como sua marca e organiza o caos.</p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-start gap-2"><span className="text-[#00f0ff] mt-1">✅</span><span className="text-gray-200">Centraliza WhatsApp, Instagram, E-mail e outros canais</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#00f0ff] mt-1">✅</span><span className="text-gray-200">Utiliza linguagem treinada com o DNA da sua empresa</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#00f0ff] mt-1">✅</span><span className="text-gray-200">Gera métricas acionáveis: tempo de resposta, engajamento, conversões por canal</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#00f0ff] mt-1">✅</span><span className="text-gray-200">Visual sob medida, com domínio próprio e estrutura isolada</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#00f0ff] mt-1">✅</span><span className="text-gray-200">Criptografia em múltiplas camadas: os dados do seu cliente ficam onde devem estar — sob controle</span></div>
-                </div>
-                <div className="bg-[#00f0ff]/5 rounded-xl p-4 border border-[#00f0ff]/20 mb-6 flex items-center gap-2">
-                  <span className="text-2xl">🧩</span>
-                  <span className="text-[#00f0ff] font-semibold">Impacto real:</span>
-                  <span className="text-gray-200">Mais agilidade, consistência no atendimento e redução de tarefas repetitivas.</span>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3">
-                <button
-                  className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-[#00F0FF] via-[#6B8AFF] to-[#9442FE] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#00F0FF60] hover:shadow-[0_0_40px_#00F0FF90] transition-all"
-                  onClick={() => {
-                    const el = document.getElementById('contato');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  🔮 Quero ver como o Synapse funciona na prática
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* Card Machina */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-[#FFB86C]/40 bg-black/80 group transition-all duration-300 hover:shadow-[0_0_40px_#FFB86Ccc] hover:border-[#FFB86C] hover:scale-[1.025] flex flex-col h-full justify-between">
-            <div className="flex items-center gap-3 px-8 py-6">
-              <span className="text-3xl">⚙️</span>
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#FFB86C] to-[#FF6F91] bg-clip-text text-transparent drop-shadow-[0_0_8px_#FFB86C]">Ugarit Machina</span>
-            </div>
-            {/* Para quem é */}
-            <div className="flex items-center gap-2 px-8 pb-2">
-              <span className="text-[#FFB86C] text-lg">📌</span>
-              <span className="text-sm text-[#FFB86C] font-semibold">Ideal para empresas com processos recorrentes e integração entre sistemas</span>
-            </div>
-            <div className="flex-1 flex flex-col px-8 py-6 justify-between">
-              <div>
-                <p className="text-gray-200 mb-6">Plataforma de automação que executa decisões com a lógica do seu negócio.</p>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-start gap-2"><span className="text-[#FFB86C] mt-1">✅</span><span className="text-gray-200">Criação de fluxos inteligentes sob medida (no-code ou código puro)</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#FFB86C] mt-1">✅</span><span className="text-gray-200">Integração com APIs, CRMs, bancos de dados e sistemas internos</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#FFB86C] mt-1">✅</span><span className="text-gray-200">Logs e rastreabilidade total por cliente</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#FFB86C] mt-1">✅</span><span className="text-gray-200">Estrutura com isolamento por VPS + criptografia ponta a ponta</span></div>
-                  <div className="flex items-start gap-2"><span className="text-[#FFB86C] mt-1">✅</span><span className="text-gray-200">Alertas, backups e fallback automático para garantir resiliência</span></div>
-                </div>
-                <div className="bg-[#FFB86C]/5 rounded-xl p-4 border border-[#FFB86C]/20 mb-6 flex items-center gap-2">
-                  <span className="text-2xl">🧩</span>
-                  <span className="text-[#FFB86C] font-semibold">Impacto real:</span>
-                  <span className="text-gray-200">Menos dependência de tarefas manuais. Mais tempo e controle para o que importa.</span>
-                </div>
-              </div>
-              <div className="flex flex-col gap-3">
-                <button
-                  className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-[#FFB86C] to-[#FF6F91] text-white font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_#FFB86C60] hover:shadow-[0_0_40px_#FFB86C90] transition-all"
-                  onClick={() => {
-                    const el = document.getElementById('contato');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  ⚙️ Me envie um exemplo real do Machina
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
