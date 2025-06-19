@@ -4,7 +4,8 @@ import { createPageUrl } from "../utils";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, ArrowRight, Zap, Brain, Sparkles, BarChart3 } from "lucide-react";
 import UgaritLogo from "../assets/UgaritLogo.svg";
-import UgaritLogoImg from "../assets/Screenshot_2025-05-14_13.42.23-removebg-preview.png";
+import UgaritLogoImgPng from "../assets/Screenshot_2025-05-14_13.42.23-removebg-preview.png";
+import UgaritLogoImgWebp from "../assets/Screenshot_2025-05-14_13.42.23-removebg-preview.webp";
 import HeroBg from "../assets/hero-bg.svg";
 import LogoMarquee from "../components/LogoMarquee";
 import TestimonialCarousel from "../components/TestimonialCarousel";
@@ -57,7 +58,7 @@ export default function Home() {
               style={{ opacity: heroOpacity, y: heroY }}
             >
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 neon-animated-border">
                 <span className="mr-2 flex items-center">
                   {/* Ícone Brain Lucide com cor de cérebro humano */}
                   <Brain className="w-5 h-5 text-[#FF6F91] drop-shadow-[0_0_6px_#FF6F91]" strokeWidth={2.2} />
@@ -68,7 +69,11 @@ export default function Home() {
               {/* Título Principal */}
               <div className="mb-6">
                 <h1 className="text-4xl md:text-6xl font-bold mb-2">
-                  Automação Inteligente e Agentes Humanizados para Empresas Inovadoras
+                  <TypewriterText
+                    text={"Automação Inteligente e Agentes Humanizados para Empresas Inovadoras"}
+                    speed={45}
+                    className="text-4xl md:text-6xl font-bold text-center"
+                  />
                 </h1>
               </div>
 
@@ -115,7 +120,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-[#00f0ff]/20 to-[#9442fe]/20 border border-[#00f0ff]/30 text-white font-medium rounded-full flex items-center space-x-2 group hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] transition-all duration-300"
+                  className="laser-btn px-8 py-4 bg-gradient-to-r from-[#0a2328]/30 to-[#1a1a2b]/30 border border-[#00f0ff]/30 text-white font-medium rounded-full flex items-center space-x-2 group hover:shadow-[0_0_25px_rgba(0,240,255,0.2)] transition-all duration-300"
                   onClick={() => window.gtmTrack('clique_diagnostico')}
                 >
                   <span>Quero um diagnóstico gratuito</span>
@@ -143,7 +148,7 @@ export default function Home() {
           <div className="absolute -right-32 -bottom-32 w-96 h-96 bg-[#9442fe]/10 blur-[120px] rounded-full pointer-events-none"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full border neon-border">
+              <div className="inline-flex items-center px-4 py-2 rounded-full border neon-border neon-pulse-btn">
                 <span className="mr-2 flex items-center">
                   <BarChart3 className="w-5 h-5 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" strokeWidth={2.2} />
                 </span>
@@ -340,9 +345,8 @@ export default function Home() {
           <div className="container mx-auto px-4">
             {/* Header */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-6 py-2 rounded-full border neon-border text-white/90 font-semibold text-sm mb-6 shadow-lg">
+              <div className="inline-flex items-center px-6 py-2 rounded-full border neon-border neon-pulse-btn text-white/90 font-semibold text-sm mb-6 shadow-lg">
                 <span className="mr-2 flex items-center">
-                  {/* Ícone neon */}
                   <svg className="w-5 h-5 text-[#00f0ff] drop-shadow-[0_0_8px_#00f0ff] animate-pulse" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </span>
                 Metodologia de Entrega
@@ -377,7 +381,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                {/* Ícone central azul */}
                 <div className="flex flex-col items-center z-10 justify-center w-full md:w-32 my-6 md:my-0">
                   <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#3BA3FF] flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-[#10192B] mx-auto">
                     <svg xmlns='http://www.w3.org/2000/svg' className='w-7 h-7 md:w-8 md:h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4.5c-4.5 0-8.25 2.25-8.25 5.25 0 1.5 1.5 2.25 2.25 2.25.75 0 1.5-.75 1.5-1.5s-.75-1.5-1.5-1.5c-.75 0-1.5.75-1.5 1.5 0 3 3.75 5.25 8.25 5.25s8.25-2.25 8.25-5.25c0-.75-.75-1.5-1.5-1.5s-1.5.75-1.5 1.5.75 1.5 1.5 1.5c.75 0 2.25-.75 2.25-2.25 0-3-3.75-5.25-8.25-5.25z' /></svg>
@@ -387,8 +390,13 @@ export default function Home() {
 
               {/* Fase 2 - Esquerda */}
               <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
-                <div className="w-1/2"></div>
-                <div className="w-1/2 flex justify-start pl-8 items-center">
+                <div className="hidden md:block md:w-1/2"></div>
+                <div className="flex flex-col items-center z-10 justify-center w-full md:w-32 my-6 md:my-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#9442FE] flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-[#2B1A4D] mx-auto">
+                    <svg xmlns='http://www.w3.org/2000/svg' className='w-7 h-7 md:w-8 md:h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4.5c-4.5 0-8.25 2.25-8.25 5.25 0 1.5 1.5 2.25 2.25 2.25.75 0 1.5-.75 1.5-1.5s-.75-1.5-1.5-1.5c-.75 0-1.5.75-1.5 1.5 0 3 3.75 5.25 8.25 5.25s8.25-2.25 8.25-5.25c0-.75-.75-1.5-1.5-1.5s-1.5.75-1.5 1.5.75 1.5 1.5 1.5c.75 0 2.25-.75 2.25-2.25 0-3-3.75-5.25-8.25-5.25z' /></svg>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 flex justify-center md:justify-start md:pl-8 items-center">
                   <div className="border-2 border-[#9442FE] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #9442FE, 0 0 8px 2px #9442FE' }}>
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#2B1A4D] text-[#9442FE] px-3 py-1 rounded-full text-xs font-semibold">Fase 2 – Construção Cognitiva</span>
@@ -410,7 +418,7 @@ export default function Home() {
 
               {/* Fase 3 - Direita */}
               <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
-                <div className="w-1/2 flex justify-end pr-8 items-center">
+                <div className="w-full md:w-1/2 flex justify-end md:pr-8 items-center mb-4 md:mb-0">
                   <div className="border-2 border-[#FFD600] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #FFD600, 0 0 8px 2px #FFD600' }}>
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#2B2B1A] text-[#FFD600] px-3 py-1 rounded-full text-xs font-semibold">Fase 3 – Otimização de Performance</span>
@@ -437,8 +445,13 @@ export default function Home() {
 
               {/* Fase 4 - Esquerda */}
               <div className="relative w-full flex flex-col md:flex-row mb-10 md:mb-16 items-center">
-                <div className="w-1/2"></div>
-                <div className="w-1/2 flex justify-start pl-8 items-center">
+                <div className="hidden md:block md:w-1/2"></div>
+                <div className="flex flex-col items-center z-10 justify-center w-full md:w-32 my-6 md:my-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#00FF85] flex items-center justify-center text-white text-2xl md:text-3xl font-bold shadow-lg border-4 border-[#1A4D2B] mx-auto">
+                    <svg xmlns='http://www.w3.org/2000/svg' className='w-7 h-7 md:w-8 md:h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 4.5c-4.5 0-8.25 2.25-8.25 5.25 0 1.5 1.5 2.25 2.25 2.25.75 0 1.5-.75 1.5-1.5s-.75-1.5-1.5-1.5c-.75 0-1.5.75-1.5 1.5 0 3 3.75 5.25 8.25 5.25s8.25-2.25 8.25-5.25c0-.75-.75-1.5-1.5-1.5s-1.5.75-1.5 1.5.75 1.5 1.5 1.5c.75 0 2.25-.75 2.25-2.25 0-3-3.75-5.25-8.25-5.25z' /></svg>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 flex justify-center md:justify-start md:pl-8 items-center">
                   <div className="border-2 border-[#00FF85] rounded-2xl p-4 md:p-8 w-full max-w-xl text-left text-white bg-black/60" style={{ boxShadow: '0 0 24px 4px #00FF85, 0 0 8px 2px #00FF85' }}>
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 gap-2">
                       <span className="bg-[#1A4D2B] text-[#00FF85] px-3 py-1 rounded-full text-xs font-semibold">Fase 4 – Operação Contínua</span>
@@ -456,11 +469,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Botão CTA */}
-              <div className="flex justify-center w-full relative" style={{ zIndex: 2 }}>
-                <a href="#contato" className="neon-button px-10 py-4 rounded-full text-lg font-bold shadow-lg mt-24 block">Quero acelerar meus resultados</a>
               </div>
             </div>
           </div>
@@ -480,7 +488,7 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center px-4 py-2 rounded-full border neon-border"
+                  className="inline-flex items-center px-4 py-2 rounded-full border neon-border neon-pulse-btn"
                 >
                   <span className="mr-2 flex items-center">
                     {/* Ícone neon */}
@@ -559,7 +567,7 @@ export default function Home() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-[#00F0FF] to-transparent opacity-50"></div>
 
             <div className="flex justify-center mb-12">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-black backdrop-blur-md border border-[#00F0FF]/30 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-black backdrop-blur-md border border-[#00F0FF]/30 shadow-[0_0_15px_rgba(0,240,255,0.2)] neon-pulse-btn">
                 <svg className="w-4 h-4 mr-2 text-[#00F0FF] drop-shadow-[0_0_3px_rgba(0,240,255,0.6)]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>

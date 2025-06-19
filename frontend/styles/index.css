@@ -337,4 +337,12 @@ body, .text-white, .headline-white {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.timeline-highlight {
+  box-shadow: 0 0 32px 8px #00f0ff55, 0 0 8px 2px #00f0ff99;
+  border-color: #00f0ff !important;
+  transform: scale(1.03);
+  transition: box-shadow 0.4s, border-color 0.4s, transform 0.4s;
+  z-index: 2;
 } 
